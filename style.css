@@ -18,6 +18,7 @@ body {
 }
 
 .logo a {
+  font-family: 'Assistant', sans-serif;
   font-size: 50px;
   font-weight: 800;
   float: left;
@@ -40,6 +41,7 @@ nav {
   background: #ffffff;
   z-index: 1;
   /* border-bottom: 1px solid #ff2e63; */
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
 
 nav ul {
@@ -88,9 +90,11 @@ section {
 }
 
 h2 {
-  /* font-family: 'comic sans ms'; */
+  font-family: 'Assistant', sans-serif;
   font-weight: 800;
-  font-size: 45px;
+  font-size: 50px;
+  line-height: 33px;
+
   margin-top: -20px;
   margin-bottom: 20px;
   color: #FF4F5A;
@@ -115,11 +119,11 @@ a.tbl-signup:hover {
 }
 
 a.tbl-signin {
-  background: #white;
+  background: #ffffff;
   border-radius: 15px;
   margin-top: 20px;
   margin-left: 20px;  
-  padding: 5px 25px 10px 25px;
+  padding: 4px 25px 8px 25px;
   border: 2px solid red;
   color: #FF4F5A;
   cursor: pointer;
@@ -160,50 +164,12 @@ p.desk{
   width: 100%;
 }
 
-.tutor-list {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.kartu-tutor {
-  width: 20%;
-  margin: 0 auto;
-}
-
-.kartu-tutor img {
-  width: 80%;
-  border-radius: 50%;
-}
-
-.kartu-tutor p {
-  font-family: 'comic sans ms';
-  font-weight: 800;
-  font-size: 25px;
-  text-align: center;
-  color: #ff2e63;
-}
-
-.partner-list {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.kartu-partner {
-  width: 20%;
-  margin: 0 auto;
-}
-
-.kartu-partner img {
-  width: 150px;
-  border-radius: 50%;
+.background{
+  /* background-color: #ff2e63; */
 }
 
 #contact {
-  background: #dedede;
+  background: #ffffff;
   padding: 50px 0px 50px 0px;
 }
 
@@ -221,23 +187,23 @@ p.desk{
 }
 
 h3 {
-  font-family: 'comic sans ms';
   font-weight: 800;
   font-size: 30px;
   margin-bottom: 20px;
-  color: #ff2e63;
+  color: #FF4F5A;
   width: 100%;
   line-height: 50px;
 }
 
 #copyright {
+  background: #FF4F5A;
+  color: #ffffff;
   text-align: center;
   width: 100%;
-  padding: 50px 0px 50px 0px;
-  margin-top: 30px;
+  padding: 20px 0px 20px 0px;
 }
 
-@media screen and (max-width: 991.98px) {
+/* @media screen and (max-width: 991.98px) {
   .wrapper {
     width: 90%;
   }
@@ -273,4 +239,4 @@ h3 {
   .kartu-partner {
     width: 50%;
   }
-}
+} */
