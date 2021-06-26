@@ -13,7 +13,8 @@ body{
 .table-tab{
     background: #ffffff;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 table {
     font-family: arial, sans-serif;
@@ -31,7 +32,16 @@ td, th {
     margin: 0 auto;
     margin-top: 5%;
     width: 1000px;
-    height: 1000px;
+    height: 1000px; */
     /* border: 1px solid #f1f1f1; */
     /* perspective: 1000px; */
-} */
+/* } */
+
+.bawah{
+
+    background-color: white;
+    height: 80px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
