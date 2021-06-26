@@ -31,51 +31,59 @@
 <body>
     <div class="wrap-tab">
         <div class="tab">
-            <table class="table-tab">
-                <thead>
-                    <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">ID Pegawai</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Posisi</th>
-                        <th scope="col">Alamat</th>
-                        <th scope="col">Jenis Kelamin</th>
-                        <th scope="col">No Telp</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
-                    </tr>
-                </thead>
+            <div style="background-color: #E3A2AD;" class="card">
+                <div style="background-color: #E3A2AD;" class="border-0 card-header">
+                    <h5 class="text-light card-title">Data Staff</h5>
+                </div>
+                <div class="card-body">
+                <table class="table-tab">
+                    <thead class="thead-dark">
+                        <tr style="color: #E3A2AD;" class="">
+                            <th style="color: #E3A2AD;" scope="col">No</th>
+                            <th scope="col">ID Pegawai</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Posisi</th>
+                            <th scope="col">Alamat</th>
+                            <th scope="col">Jenis Kelamin</th>
+                            <th scope="col">No Telp</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <?php
+                        $no =1;
+                        foreach($results as $result) :
+                    ?>
 
-                <?php
-                    $no =1;
-                    foreach($results as $result) :
-                ?>
+                    <tbody>
+                        <tr>
+                            <td> <?= $no ?></td>
+                            <td> <?= $result['ID_Pegawai'] ?></td>
+                            <td> <?= $result['Nama'] ?></td>
+                            <td> <?= $result['Posisi'] ?></td>
+                            <td> <?= $result['Alamat'] ?></td>
+                            <td> <?= $result['Jenis_kelamin'] ?></td>
+                            <td> <?= $result['No_Telp'] ?></td>
+                            <td>
+                                <a class="btn btn-warning" href="edit_staff.php?ID_Pegawai=<?=$result['ID_Pegawai'];?>"><i class="bi bi-pencil"></i></a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" href="hapus_staff.php?ID_Pegawai=<?=$result['ID_Pegawai'];?>"><i class="bi bi-trash"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
 
-                <tbody>
-                    <tr>
-                        <td> <?= $no ?></td>
-                        <td> <?= $result['ID_Pegawai'] ?></td>
-                        <td> <?= $result['Nama'] ?></td>
-                        <td> <?= $result['Posisi'] ?></td>
-                        <td> <?= $result['Alamat'] ?></td>
-                        <td> <?= $result['Jenis_kelamin'] ?></td>
-                        <td> <?= $result['No_Telp'] ?></td>
-                        <td>
-                            <a class="btn btn-warning" href="edit_staff.php?ID_Pegawai=<?=$result['ID_Pegawai'];?>"><i class="bi bi-pencil"></i></a>
-                        </td>
-                        <td>
-                            <a class="btn btn-danger" href="hapus_staff.php?ID_Pegawai=<?=$result['ID_Pegawai'];?>"><i class="bi bi-trash"></i></a>
-                        </td>
-                    </tr>
+                    <?php
+                        $no++;
+                        endforeach;
+                    ?>
+                </table>
+                <div class="bawah">
+                    <button style="margin-left: 10px" data-toggle="modal" data-target="#tambahstaff" href="#" type="button" class="btn btn-success">Tambah Staff</button>
+                </div>
+                </div>
 
-                </tbody>
-
-                <?php
-                    $no++;
-                    endforeach;
-                ?>
-
-            </table>
+            </div>
         </div>
     </div>
 </body>
