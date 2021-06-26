@@ -1,0 +1,37 @@
+body{
+    background: #CCFFBD;
+}
+
+/* tabel Staff */
+.tab{
+    /* background: #FF4F5A; */
+    margin-top: -200px;
+    /* width: 100%; */
+    padding: 21%;
+  }
+  
+.table-tab{
+    background: #ffffff;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 10px;
+}
+
+/* .wrap-tab{
+    background: #ffffff;
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 1000px;
+    height: 1000px;
+    /* border: 1px solid #f1f1f1; */
+    /* perspective: 1000px; */
+} */

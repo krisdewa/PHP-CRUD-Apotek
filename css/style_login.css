@@ -1,0 +1,180 @@
+body{
+
+    position: absolute;
+    width: 755px;
+    height: 453px;
+    margin: 300px;
+    margin-top: 150px;
+    padding-bottom: 100px;
+}
+
+.loginpage{
+
+    float: left;
+    width: 378px;
+    height: 453px;
+    background-color: white;
+}
+
+.image{
+    
+    width: 900px;
+    height: 453px;
+    background: #FF4F5A url(../asset/login.png);
+    margin: 0 auto;
+    background-position: 490px;
+    background-size: 275px;
+    background-repeat: no-repeat;
+    
+}
+
+.login{
+
+    width: 49px;
+    height: 26px;
+
+    font-family: Assistant;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.masuk{
+
+    font-family: Assistant;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 10px;
+}
+
+.border{
+
+    width: 241px;
+    height: 35px;
+    margin-bottom: 31px;
+
+    border: 1px solid #FF4F5A;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* .googlelog{
+
+    background: url(asset/google.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    box-align:center ;
+    
+} */
+
+center{
+
+    padding-top: 5px;
+}
+
+
+
+.google{
+
+    width: 98px;
+    height: 16px;
+    text-decoration-line: none;
+    color: #000000;
+    text-align: left;
+
+    font-family: Assistant;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+input[type=email]{
+
+    width: 241px;
+    height: 35px;
+    margin-top: 9px;
+    margin-bottom: 10px;
+
+    border: 1px solid #FF4F5A;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+input[type=password]{
+
+    width: 241px;
+    height: 35px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+
+    border: 1px solid #FF4F5A;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+label{
+
+    width: 34px;
+    height: 18px;
+
+    font-family: Assistant;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.forget{
+
+    width: 90px;
+    height: 16px;
+    margin-left: 146px;
+    text-decoration-line: none;
+
+    font-family: Assistant;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FF4F5A;
+}
+
+input[type=submit]{
+
+    width: 241px;
+    height: 35px;
+    margin-top: 14px;
+    color: white;
+
+    background: #FF4F5A;
+    border: 1px solid #FF4F5A;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+[name="create"]{
+
+    width: 110px;
+    height: 16px;
+    border: none;
+    color: #FF4F5A;
+    background-color: white;
+    text-decoration-line: none;
+
+    font-family: Assistant;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+/* .images{
+
+    background: red url(asset/apotek/asset/login.png);
+    width: 275px;
+    height: 275px;
+} */

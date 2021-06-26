@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php include_once("navbar.php") ?>
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Home</title> 
+    <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
   </head>
 
   <body>
     
-    <nav>
+    <!-- <nav>
       <div class="wrapper">
         <div class="logo"><a href="">APOTEK</a></div>
         <div class="menu">
@@ -20,18 +22,15 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#">Staff</a></li>
             <li><a href="#">Supplier</a></li>
-            
-            <!-- <li><a href="#service">Service</a></li> -->
-            <!-- <li><a href="#contact">Contact</a></li> -->
-            <!-- <li><a href="" class="tbl-signup">Sign Up</a></li> -->
+  
             <li><a href="" class="tbl-signin">Login</a></li>
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <div class="wrapper">
-      
+      <div class="top"></div>
       <!-- untuk home -->
       <section id="home">
         <div class="kolom">
@@ -39,20 +38,20 @@
           <h2>Mari Kita</h2>
           <h2>Sehat Bersama</h2>
           <p class="desk">Jangan khawatir, kami akan selalu ada 24 jam melayani anda, dengan pelayanan yang profesional sesuai dengan bidangnya</>
-          <p><a href="" class="tbl-pink">Selengkapnya ></a></p>
+          <p><a href="" class="telusuri">Selengkapnya</a></p>
         </div>
-        <img src="asset/Doctor.png" alt="" width="500">
+        <img src="asset/info1.svg" alt="" width="500">
       </section>
 
       <!-- untuk service -->
       <section id="service">
-        <img src="asset/Doctor.png" alt="" width="500"/>
+        <div><img src="asset/info.svg" alt="" width="500"/></div>
         <div class="background">
           <div class="kolom">
             <!-- <p class="deskripsi">You Will Need This</p> -->
             <h2>Artikel Kesehatan</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sed, labore facere eos dignissimos rerum quidem odio doloribus ipsam a totam iure exercitationem autem nemo nisi consequatur nesciunt ad hic.</p>
-            <p><a href="" class="tbl-pink">Pelajari Lebih Lanjut</a></p>
+            <p class="desk">Kami menyediakan layanan referensi untuk Anda, menambah wawasan tentang kesehatan</p>
+            <p><a href="" class="telusuri">Selengkapnya</a></p>
           </div>
         </div>
       </section>
