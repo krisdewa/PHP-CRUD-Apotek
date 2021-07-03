@@ -2,45 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_login.css">
     <title>LOGIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style_login.css">
 </head>
 <body>
-    <div class="loginpage">
-        <h1 class="login">LOGIN</h1>
-        <form action="" method="get">
-            <div class="head">
-                <div class="border"><center><a class="google" href="">Sign in with Google</a></center></div>
-            </div>
-
-            <div class="mail">
-                <label style="margin-bottom: 9px;" for="">Email</label> <br>
-                <input type="email" name="username" id="">
-            </div>
-
-            <div>
-                <label for="">Password</label> <br>
-                <input type="password" name="password" id="">
-            </div>
-
-            <div>
-                <a class="forget" href="#forget">Forget Password?</a>
-            </div>
-
-            <div>
-                <input class="login1" type="submit" value="Login">
-            </div>
-
-            <div style="margin-top: 7px;">
-                <label for="">Not registered yet?</label>
-                <a name="create" href="#create">Forget Password?</a>
-            </div>
-        </form>
-    </div>
-    <div class="image">
-        <!-- <a href="apotek/asset/login.php" class="href"></a> -->
-    </div>
+    <div class="container">
+        <div class="row justify-content-md-center">
+          <div id="login" class="col col-lg-4">
+            <h4 id="logintext" class="font-weight-bold">LOGIN</h4>
+              <form class="" action="" method="get">
+                    <div class="form-group">
+                        <label style="margin-bottom: 30px;" for="formGroupExampleInput">Email</label>
+                        <input style="margin-bottom: 30px;" type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label style="margin-bottom: 30px;" for="formGroupExampleInput2">Password</label>
+                        <input style="margin-bottom: 30px;" type="password" class="form-control" id="formGroupExampleInput2" placeholder="">
+                    </div>
+                    <div class="form-groub">
+                        <button style="margin-top: 14px; margin-bottom: 20px;" id="loginbtn" class="btn btn-primary" type="submit">Login</button>
+                    </div>
+                    <div class="form-groub">
+                        <p  id="notreg">Not registered yet?<a id="create" href=""> Create an Account</a></p>
+                    </div>
+              </form>
+          </div>
+          <div id="gambar" class="col col-lg-4">
+              <!-- <img src="asset/login.png" class="rounded mx-auto d-block" alt=""> -->
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 </html>

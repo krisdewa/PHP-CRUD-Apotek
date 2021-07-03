@@ -27,14 +27,14 @@
 <body>
     <div class="wrap-tab">
         <div class="tab">
-            <div style="background-color: #E3A2AD;" class="card">
-            <div style="background-color: #E3A2AD;" class="border-0 card-header">
+            <div style="background-color: #7ECA9C;" class="card">
+            <div style="background-color: #7ECA9C;" class="border-0 card-header">
                     <h5 class="text-light card-title">Data Supplier</h5>
                 </div>
                 <div class="card-body">
-                    <table class="table-tab">
+                    <table style="background-color: white;" class="table-tab">
                         <thead>
-                            <tr style="color: #E3A2AD;" >
+                            <tr style="color: black;" >
                                 <th scope="col">No</th>
                                 <th scope="col">ID Supplier</th>
                                 <th scope="col">Nama Supplier</th>
@@ -83,7 +83,7 @@
     <!-- Modal -->
     <div class="modal fade" id="tambahsupliyer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div style="background-color: #E9A2AD;" class="modal-content">
+        <div style="background-color: #2F5D62;" class="modal-content">
         <div class="border-0 modal-header">
             <h5 class="text-light fw-bolder modal-title" id="exampleModalLabel">APTK24</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -91,7 +91,7 @@
             <h5 style="color: black; margin-top: 8px;" class="text-light fw-bolder text-center">TAMBAH SUPPLIER</h5>
         <div class="modal-body">
             <form action="">
-                <div class="row">
+                <div style="color: white;" class="row">
                     <div class="form-group col-md-6">
                         <label style="margin-bottom: 5px;" for="tambahid">ID Supplier</label>
                         <input type="text" class="form-control" id="IDSupplier" placeholder=""> <br>
@@ -113,7 +113,7 @@
         </div>
         <div class="border-0 modal-footer">
             <button style="margin-top: 50px; margin-bottom: 50px;" type="button" class="btn btn-danger" data-bs-dismiss="modal">Hapus</button>
-            <button style="margin-top: 50px; margin-bottom: 50px; margin-right: 7px;" type="submit" class="btn btn-success">Simpan</button>
+            <button style="margin-top: 50px; margin-bottom: 50px; margin-right: 7px; background-color: #00FF19;" type="submit" class="btn btn-success">Simpan</button>
         </div>
         </div>
     </div>
