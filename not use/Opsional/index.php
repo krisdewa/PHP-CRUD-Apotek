@@ -2,13 +2,13 @@
 <html lang="en">
 
 <?php include_once("navbar.php") ?>
-  
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title> 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
   </head>
 
@@ -40,12 +40,12 @@
           <p class="desk">Jangan khawatir, kami akan selalu ada 24 jam melayani anda, dengan pelayanan yang profesional sesuai dengan bidangnya</>
           <p><a href="" class="telusuri">Selengkapnya</a></p>
         </div>
-        <img src="asset/info1.svg" alt="" width="500">
+        <img src="../asset/info1.svg" alt="" width="500">
       </section>
 
       <!-- untuk service -->
       <section id="service">
-        <div><img src="asset/info.svg" alt="" width="500"/></div>
+        <div><img src="../asset/info.svg" alt="" width="500"/></div>
         <div class="background">
           <div class="kolom">
             <!-- <p class="deskripsi">You Will Need This</p> -->

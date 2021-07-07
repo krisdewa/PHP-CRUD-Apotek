@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="css/navbar.css">
 </head>
 
 <body>
@@ -26,10 +25,14 @@
                     <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item mx-3" style="font-size: 20px;">
-                    <a id="loginbtn" class="btn btn-primary nav-link active" aria-current="page" href="login.php">LOGIN</a>
+                    <a class="nav-link active" aria-current="page" href="service.php">Service</a>
+                </li>
+                <li class="nav-item mx-3" style="font-size: 20px;">
+                    <a class="nav-link active" aria-current="page" href="supplier.php">About</a>
                 </li>
             </ul>
         </div>
+
         </div>
     </div>
     </nav>

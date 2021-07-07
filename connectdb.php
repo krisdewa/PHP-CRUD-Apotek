@@ -13,7 +13,7 @@ if(!$koneksi){
 //UNTUK WAJIB AUTHENTICATION SEBELUM MENGAKSES WEB
 function login() {
     session_start();
-    if(empty($_SESSION['username'])){
+    if(empty($_SESSION['email'])){
         header('location: login.php');
     }
 }

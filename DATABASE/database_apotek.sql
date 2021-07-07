@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2021 at 03:27 AM
+-- Generation Time: Jul 06, 2021 at 02:56 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -41,8 +41,10 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`ID_Barang`, `nama_barang`, `kategori`, `harga_jual`, `harga_beli`, `stok`) VALUES
-(2021485, 'Alkohol Swap', 'Obat', 16000, 13000, 200),
-(2021930, 'Paracetamol', 'Obat', 10000, 9000, 100);
+(12121, 'Ultramilk', 'Sembako', 5000, 3500, 1000),
+(2021931, '', '', 0, 0, 0),
+(2021932, '', '', 0, 0, 0),
+(2021940, '', '', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -64,10 +66,10 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`ID_Pegawai`, `Nama`, `Posisi`, `Alamat`, `Jenis_kelamin`, `No_Telp`) VALUES
-(2021048, 'Mitsuki', 'Ajudan II', 'Central City', 'Laki', '084958698495'),
-(2021453, 'Jarwo', 'Mayor', 'Dungboto', 'Perempuan', '08229384958'),
-(2021594, 'Hidan no aria', 'Ajudan I', 'akihabara', 'Perempuan', '083959439584'),
-(2021596, 'Anjas', 'Komandan', 'Jayapura', 'Laki', '084948594385');
+(34234, 'jihan', 'ajudan 2', 'madiun', 'laki', '342424'),
+(903948, 'giantr', 'perempuan', 'malang', 'staff penimbang', '082248953948'),
+(903953, '', '', '', '', ''),
+(903954, 'hesoyam', 'wadon', 'asdasdad', 'ptani', '1313');
 
 -- --------------------------------------------------------
 
@@ -87,15 +89,14 @@ CREATE TABLE `supplier` (
 --
 
 INSERT INTO `supplier` (`ID_Supplier`, `nama_supplier`, `alamat_supplier`, `No_Telp`) VALUES
-(2021851, 'Jihan', 'malaysia', '082934789489'),
-(2021852, 'Aira', 'Istana Raja I Kebumen', '083994856932'),
 (2021853, 'Tatsui', 'Tokyo', '084948594385'),
 (2021854, 'Sei', 'Mongolia', '083994856932'),
 (2021855, 'Tatsuianjaiyani', 'palembang', '084948594385'),
 (2021856, 'Dhea', 'Jakarta', '083959439584'),
 (2021857, 'Elsa', 'Bali', '084958698495'),
-(2021858, 'Kintana', 'New York', '082394059405'),
-(2021859, 'Ulum nadia', 'hindia', '082294859485');
+(2021860, '', '', ''),
+(2021861, '', '', ''),
+(2021862, 'dinan', 'jogja', '082236474758');
 
 -- --------------------------------------------------------
 
@@ -107,9 +108,26 @@ CREATE TABLE `user` (
   `ID_User` int(11) NOT NULL,
   `nama` varchar(20) NOT NULL,
   `email` varchar(20) NOT NULL,
+  `level` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`ID_User`, `nama`, `email`, `level`, `username`, `password`) VALUES
+(23453, 'krisna', 'krisdewa23@gmail.com', 'kepala', 'krisdewa', 'nopassword'),
+(247923, 'gentha', 'gentha101@gmail.com', 'staff', 'gntha', 'nopassword'),
+(247924, 'naufak', 'naufak@gmail.com', 'staff', 'naufak', '827ccb0eea8a706c4c34a16891f84e7b'),
+(247925, 'Naufak hakim', 'naufak1@gmail.com', 'staff', 'naufak1@gmail.com', '12345'),
+(247926, 'asdas', 'aasdasd', 'staff', 'asd', 'dsadad'),
+(247927, 'adasdasdadad', 'adadad', 'staff', 'asdasd', 'asdasd'),
+(247928, 'asdasdasdas', 'ds fdsfsdf', 'staff', 'sfsdfsdf', 'sdfsfd'),
+(247933, '', '', 'staff', '', ''),
+(247934, 'Dewa', 'dewa', 'staff', 'dewa', 'dewa'),
+(247935, 'staff', 'staff', 'staff', 'staff', 'staff');
 
 --
 -- Indexes for dumped tables
@@ -147,19 +165,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `ID_Barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2021931;
+  MODIFY `ID_Barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2021941;
+
+--
+-- AUTO_INCREMENT for table `staff`
+--
+ALTER TABLE `staff`
+  MODIFY `ID_Pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=903955;
 
 --
 -- AUTO_INCREMENT for table `supplier`
 --
 ALTER TABLE `supplier`
-  MODIFY `ID_Supplier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2021860;
+  MODIFY `ID_Supplier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2021863;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID_User` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247936;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

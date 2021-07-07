@@ -1,24 +1,26 @@
 <?php
 
-    require_once("connectdb.php");
-    // login();
+    require_once("../connectdb.php");
+    login();
 
-    $ID_Supplier = $_GET['ID_Supplier']; 
+    $ID_Pegawai = $_GET['ID_Pegawai']; 
 
-    $sql_cari = "SELECT * FROM supplier WHERE ID_Supplier = '$ID_Supplier'";
+    $sql_cari = "SELECT * FROM staff WHERE ID_Pegawai = '$ID_Pegawai'";
     $query = mysqli_query($koneksi, $sql_cari);
     $result = mysqli_fetch_assoc($query);
 
     if(isset($_POST['submit'])) {
-        $ID_Pegawai = $_POST['ID_Supplier'];
-        $nama_supplier = $_POST['nama_supplier'];
-        $alamat_supplier = $_POST['alamat_supplier'];
+        $ID_Pegawai = $_POST['ID_Pegawai'];
+        $Nama = $_POST['Nama'];
+        $Posisi = $_POST['Posisi'];
+        $Alamat = $_POST['Alamat'];
+        $Jenis_kelamin = $_POST['Jenis_kelamin'];
         $No_Telp = $_POST['No_Telp'];
 
-        $sql_edit = "UPDATE supplier SET nama_supplier = '$nama_supplier', alamat_supplier = '$alamat_supplier', Alamat = '$Alamat', No_Telp = '$No_Telp' WHERE ID_Supplier = '$ID_Supplier' ";
+        $sql_edit = "UPDATE staff SET Nama = '$Nama', Posisi = '$Posisi', Alamat = '$Alamat', Jenis_kelamin = '$Jenis_kelamin', No_Telp ='$No_Telp' WHERE ID_Pegawai = '$ID_Pegawai' ";
         mysqli_query($koneksi, $sql_edit);
 
-        header("Location:supplier.php");
+        header("Location:../data-staff.php");
 }
 
 ?>
@@ -37,29 +39,38 @@
     <div class="container-sm"> <br>
         <h1 class="display-5">UPDATE STAFF</h1>
         <hr>
-        <form action="edit_supplier.php" method="POST">
-
+        <form action="edit-staff.php" method="POST">
             <table><br>
                 <div class="mb-3 row">
                     <label class="col-sm-2 col-form-label" hidden>ID Pegawai</label>
                     <div class="col-sm-2">
-                        <input type="number" class="form-control" name="ID_Supplier" value="<?= $result['ID_Supplier'];?>" hidden>
+                        <input type="number" class="form-control" name="ID_Pegawai" value="<?= $result['ID_Pegawai'];?>" hidden>
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label class="col-sm-2 col-form-label">Nama Pegawai</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="nama_supplier" value="<?= $result['nama_supplier'];?>" >
+                        <input type="text" class="form-control" name="Nama" value="<?= $result['Nama'];?>" >
                     </div>
                 </div>
-
                 <div class="mb-3 row">
                     <label class="col-sm-2 col-form-label">Posisi</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="alamat_supplier" value="<?= $result['alamat_supplier'];?>" >
+                        <input type="text" class="form-control" name="Posisi" value="<?= $result['Posisi'];?>" >
                     </div>
                 </div>
-
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Alamat</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Alamat" value="<?= $result['Alamat'];?>" >
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">jenis kelamin</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Jenis_kelamin" value="<?= $result['Jenis_kelamin'];?>" >
+                    </div>
+                </div>
                 <div class="mb-3 row">
                     <label class="col-sm-2 col-form-label">No Telp</label>
                     <div class="col-sm-10">
@@ -70,11 +81,10 @@
             </table><br>
             <div class="float-xl-right">
                 <button class="btn btn-warning" name="submit" type="submit">Update</button>
-                <a href="supplier.php" class="btn btn-danger"> Cancel </a>
+                <a href="../data-staff.php" class="btn btn-danger"> Cancel </a>
             </div>
 
         </form>
     </div>
-
 </body>
 </html>

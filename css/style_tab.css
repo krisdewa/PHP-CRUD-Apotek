@@ -11,12 +11,13 @@ body{
   }
   
 .table-tab{
-    background: #ffffff;
+    background-color: white;
     box-sizing: border-box;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 table {
+    background-color: white;
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
