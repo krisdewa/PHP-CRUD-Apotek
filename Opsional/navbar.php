@@ -28,7 +28,7 @@
                     <a class="nav-link active" aria-current="page" href="service.php">Service</a>
                 </li>
                 <li class="nav-item mx-3" style="font-size: 20px;">
-                    <a class="nav-link active" aria-current="page" href="supplier.php">About</a>
+                    <a class="nav-link active" aria-current="page" href="service.php">About</a>
                 </li>
             </ul>
         </div>
