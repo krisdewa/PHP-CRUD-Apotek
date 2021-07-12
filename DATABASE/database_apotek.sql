@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 06, 2021 at 02:56 PM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.7
+-- Waktu pembuatan: 12 Jul 2021 pada 05.24
+-- Versi server: 10.4.11-MariaDB
+-- Versi PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `barang`
+-- Struktur dari tabel `barang`
 --
 
 CREATE TABLE `barang` (
@@ -37,19 +38,61 @@ CREATE TABLE `barang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `barang`
+-- Dumping data untuk tabel `barang`
 --
 
 INSERT INTO `barang` (`ID_Barang`, `nama_barang`, `kategori`, `harga_jual`, `harga_beli`, `stok`) VALUES
-(12121, 'Ultramilk', 'Sembako', 5000, 3500, 1000),
-(2021931, '', '', 0, 0, 0),
-(2021932, '', '', 0, 0, 0),
-(2021940, '', '', 0, 0, 0);
+(1, 'Alkohol Swap', 'Obat', 16000, 13000, 186),
+(2, 'Paracetamol', 'Obat', 10000, 9000, 87),
+(3, 'Acarbose', 'obat', 14000, 15000, 98),
+(20210707, 'Acyclovir Dexa', 'obat', 18000, 17000, 98);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `staff`
+-- Struktur dari tabel `beli`
+--
+
+CREATE TABLE `beli` (
+  `ID_Beli` int(10) NOT NULL,
+  `ID_Barang` int(10) NOT NULL,
+  `nama_pelanggan` varchar(50) NOT NULL,
+  `alamat` varchar(50) NOT NULL,
+  `tanggal` date NOT NULL,
+  `jumlah_barang` int(10) NOT NULL,
+  `total` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `beli`
+--
+
+INSERT INTO `beli` (`ID_Beli`, `ID_Barang`, `nama_pelanggan`, `alamat`, `tanggal`, `jumlah_barang`, `total`) VALUES
+(26, 1, 'muhammad naufal hafizh', 'magetan, rt03 rw03', '2021-07-11', 1, 30000),
+(27, 3, 'muhammad naufal hafizh', 'magetan, rt03 rw03', '2021-07-11', 1, 30000),
+(28, 1, 'alfy', 'ngariboyo', '2021-07-11', 2, 46000),
+(29, 3, 'alfy', 'ngariboyo', '2021-07-11', 1, 46000),
+(30, 20210707, 'test', 'test', '2021-07-11', 1, 18000),
+(31, 20210707, 'bambang', 'ngariboyo', '2021-07-11', 1, 42000),
+(32, 3, 'bambang', 'ngariboyo', '2021-07-11', 1, 42000),
+(33, 2, 'bambang', 'ngariboyo', '2021-07-11', 1, 42000),
+(34, 2, 'hafizh', 'ngariboyo', '2021-07-11', 2, 20000);
+
+--
+-- Trigger `beli`
+--
+DELIMITER $$
+CREATE TRIGGER `penjualan_barang` AFTER INSERT ON `beli` FOR EACH ROW BEGIN
+	UPDATE barang SET stok=stok-NEW.jumlah_barang
+    WHERE ID_Barang = NEW.ID_Barang;
+END
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `staff`
 --
 
 CREATE TABLE `staff` (
@@ -62,19 +105,19 @@ CREATE TABLE `staff` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `staff`
+-- Dumping data untuk tabel `staff`
 --
 
 INSERT INTO `staff` (`ID_Pegawai`, `Nama`, `Posisi`, `Alamat`, `Jenis_kelamin`, `No_Telp`) VALUES
-(34234, 'jihan', 'ajudan 2', 'madiun', 'laki', '342424'),
-(903948, 'giantr', 'perempuan', 'malang', 'staff penimbang', '082248953948'),
-(903953, '', '', '', '', ''),
-(903954, 'hesoyam', 'wadon', 'asdasdad', 'ptani', '1313');
+(2021048, 'Mitsuki', 'Kepala', 'Central City', 'Laki', '084958698496'),
+(2021453, 'Jarwo', 'Staff', 'Dungboto', 'Perempuan', '08229384958'),
+(2021594, 'Hidan no aria', 'Staff', 'akihabara', 'Perempuan', '083959439584'),
+(2021596, 'Anjas', 'Staff', 'Jayapura', 'Laki', '084948594385');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `supplier`
+-- Struktur dari tabel `supplier`
 --
 
 CREATE TABLE `supplier` (
@@ -85,23 +128,24 @@ CREATE TABLE `supplier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `supplier`
+-- Dumping data untuk tabel `supplier`
 --
 
 INSERT INTO `supplier` (`ID_Supplier`, `nama_supplier`, `alamat_supplier`, `No_Telp`) VALUES
+(2021851, 'Jihan', 'malaysia', '082934789489'),
+(2021852, 'Aira', 'Istana Raja I Kebumen', '083994856932'),
 (2021853, 'Tatsui', 'Tokyo', '084948594385'),
 (2021854, 'Sei', 'Mongolia', '083994856932'),
 (2021855, 'Tatsuianjaiyani', 'palembang', '084948594385'),
 (2021856, 'Dhea', 'Jakarta', '083959439584'),
 (2021857, 'Elsa', 'Bali', '084958698495'),
-(2021860, '', '', ''),
-(2021861, '', '', ''),
-(2021862, 'dinan', 'jogja', '082236474758');
+(2021858, 'Kintana', 'New York', '082394059405'),
+(2021859, 'Ulum nadia', 'hindia', '082294859485');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -114,76 +158,74 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`ID_User`, `nama`, `email`, `level`, `username`, `password`) VALUES
-(23453, 'krisna', 'krisdewa23@gmail.com', 'kepala', 'krisdewa', 'nopassword'),
-(247923, 'gentha', 'gentha101@gmail.com', 'staff', 'gntha', 'nopassword'),
-(247924, 'naufak', 'naufak@gmail.com', 'staff', 'naufak', '827ccb0eea8a706c4c34a16891f84e7b'),
-(247925, 'Naufak hakim', 'naufak1@gmail.com', 'staff', 'naufak1@gmail.com', '12345'),
-(247926, 'asdas', 'aasdasd', 'staff', 'asd', 'dsadad'),
-(247927, 'adasdasdadad', 'adadad', 'staff', 'asdasd', 'asdasd'),
-(247928, 'asdasdasdas', 'ds fdsfsdf', 'staff', 'sfsdfsdf', 'sdfsfd'),
-(247933, '', '', 'staff', '', ''),
-(247934, 'Dewa', 'dewa', 'staff', 'dewa', 'dewa'),
-(247935, 'staff', 'staff', 'staff', 'staff', 'staff');
+(20210501, 'Mitsuki', 'Mitsuki@gmail.com', 'kepala', 'head01', 'head01'),
+(20210502, 'Jarwo', 'Jarwokuat@gmail.com', 'staff', 'staff01', 'staff01');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `barang`
+-- Indeks untuk tabel `barang`
 --
 ALTER TABLE `barang`
   ADD PRIMARY KEY (`ID_Barang`);
 
 --
--- Indexes for table `staff`
+-- Indeks untuk tabel `beli`
+--
+ALTER TABLE `beli`
+  ADD PRIMARY KEY (`ID_Beli`);
+
+--
+-- Indeks untuk tabel `staff`
 --
 ALTER TABLE `staff`
   ADD PRIMARY KEY (`ID_Pegawai`);
 
 --
--- Indexes for table `supplier`
+-- Indeks untuk tabel `supplier`
 --
 ALTER TABLE `supplier`
   ADD PRIMARY KEY (`ID_Supplier`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`ID_User`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `barang`
+-- AUTO_INCREMENT untuk tabel `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `ID_Barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2021941;
+  MODIFY `ID_Barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20210708;
 
 --
--- AUTO_INCREMENT for table `staff`
+-- AUTO_INCREMENT untuk tabel `beli`
 --
-ALTER TABLE `staff`
-  MODIFY `ID_Pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=903955;
+ALTER TABLE `beli`
+  MODIFY `ID_Beli` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT for table `supplier`
+-- AUTO_INCREMENT untuk tabel `supplier`
 --
 ALTER TABLE `supplier`
-  MODIFY `ID_Supplier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2021863;
+  MODIFY `ID_Supplier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2021860;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247936;
+  MODIFY `ID_User` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20210503;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
