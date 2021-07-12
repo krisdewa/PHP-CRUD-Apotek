@@ -1,12 +1,12 @@
 TUGAS AKHIR PRPL PHP CRUD Sisted Administrasi di Apotek
 
 teknologi yang digunakan : 
-- php
-- bootstrap
-- mysql(xammp)
+- PHP
+- Bootstrap
+- MySQL(xammp)
 
 Contributor : 
 - Krisna Dewa Pratama
-- Muhammad Naufal Hafizh
 - Gentha Muhammad Djamal
+- Muhammad Naufal Hafizh
 - Lalu Gugus
