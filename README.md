@@ -1,4 +1,5 @@
-TUGAS AKHIR PRPL PHP CRUD Sisted Administrasi di Apotek
+TUGAS AKHIR PRPL 
+PHP CRUD Sistem Administrasi di Apotek
 
 Teknologi yang digunakan : 
 - PHP
