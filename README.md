@@ -1,6 +1,6 @@
 TUGAS AKHIR PRPL PHP CRUD Sisted Administrasi di Apotek
 
-teknologi yang digunakan : 
+Teknologi yang digunakan : 
 - PHP
 - Javascript
 - Bootstrap
