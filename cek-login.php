@@ -40,12 +40,15 @@ if($cek > 0){
 	}else{
 		// alihkan ke halaman login kembali
 		// echo("")
-		header("location:login.php?pesan=gagal");
+
+		echo "<script> alert('Email atau password anda salah !!!'); </script>";
+		echo "<script> location='login.php'; </script>";
 	}
 
 	
 }else{
-	header("location:index.php?pesan=gagal");
+	echo "<script> alert('Email atau password anda salah !!!'); </script>";
+	echo "<script> location='login.php'; </script>";
 }
 
 
