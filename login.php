@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>LOGIN</title>
@@ -7,9 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style_login.css">
 </head>
+
 <body>
     <div class="container" >
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-md-center ">
           <div id="login" class="col col-lg-4">
             <h4 id="logintext" class="font-weight-bold">LOGIN</h4>
               <form class="" action="cek-login.php" method="post">
@@ -35,15 +37,6 @@
         </div>
       </div>
 
-    <!-- alert  -->
-    <!-- <script> 
-        const btn = document.getElementById('loginbtn');
-        btn.addEventListener('click',function(){
-            Swal.fire('Any fool can use a computer')
-        }
-    </script> -->
-<!-- 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 </html>

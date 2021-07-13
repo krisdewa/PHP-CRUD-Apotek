@@ -1,6 +1,6 @@
 <?php
-    
     include_once("connectdb.php");
+    login();
     include_once("navbar/navbar.php")
 
 ?>

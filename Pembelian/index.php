@@ -40,12 +40,12 @@
           <p class="desk">Jangan khawatir, kami akan selalu ada 24 jam melayani anda, dengan pelayanan yang profesional sesuai dengan bidangnya</>
           <p><a href="" class="telusuri">Selengkapnya</a></p>
         </div>
-        <img src="../asset/info1.svg" alt="" width="500">
+        <img src="../asset/img/info1.svg" alt="" width="500">
       </section>
 
       <!-- untuk service -->
       <section id="service">
-        <div><img src="../asset/info.svg" alt="" width="500"/></div>
+        <div><img src="../asset/img/info.svg" alt="" width="500"/></div>
         <div class="background">
           <div class="kolom">
             <!-- <p class="deskripsi">You Will Need This</p> -->
