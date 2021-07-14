@@ -2,19 +2,24 @@ body{
     background: #CCFFBD;
 }
 
-/* tabel Staff */
+/* Tabel CSS */
 .tab{
     /* background: #FF4F5A; */
-    margin-top: -200px;
+    /* margin-top: -150px; */
     /* width: 100%; */
-    padding: 21%;
+    /* padding: 18%; */
+    padding-top: 120px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 50px;
+  
   }
   
 .table-tab{
     background-color: white;
     box-sizing: border-box;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 table {
     background-color: white;
@@ -41,8 +46,8 @@ td, th {
 .bawah{
 
     background-color: white;
-    height: 80px;
+    height: 100px;
     margin-bottom: 30px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }

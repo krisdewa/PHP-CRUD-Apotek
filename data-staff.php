@@ -1,16 +1,6 @@
 <?php
     include_once("connectdb.php");
     login();
-    
-    $sql_get = "SELECT * FROM staff";
-    $query_staff = mysqli_query($koneksi, $sql_get);
-
-    $results = [];
-
-    while($row = mysqli_fetch_assoc($query_staff)) {
-        $results[] = $row;
-    }
-
     include_once("navbar-kepala.php")
 ?>
 
@@ -47,14 +37,27 @@
                             <th scope="col">Delete</th>
                         </tr>
                     </thead>
-                    <?php
-                        $no =1;
-                        foreach($results as $result) :
-                    ?>
 
                     <tbody>
+                        <!-- PAGINATION TABLE -->
+                        <?php
+                                $batas = 5;
+                                $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
+                                $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
+                            
+                                $previous = $halaman - 1;
+                                $next = $halaman + 1;
+                                
+                                $data = mysqli_query($koneksi,"select * from staff");
+                                $jumlah_data = mysqli_num_rows($data);
+                                $total_halaman = ceil($jumlah_data / $batas);
+                                $query = mysqli_query($koneksi,"select * from staff LIMIT $halaman_awal, $batas");
+
+                                $no = $halaman_awal+1;
+                                while($result = mysqli_fetch_array($query)){
+                        ?>
                         <tr>
-                            <td> <?= $no ?></td>
+                            <td> <?= $no++ ?></td>
                             <td> <?= $result['ID_Pegawai'] ?></td>
                             <td> <?= $result['Nama'] ?></td>
                             <td> <?= $result['Posisi'] ?></td>
@@ -70,12 +73,29 @@
                         </tr>
                     </tbody>
 
-                    <?php
-                        $no++;
-                        endforeach;
-                    ?>
+                        <!-- END PAGINATION -->
+                        <?php
+                            }
+                        ?>
                 </table>
                 <div class="bawah">
+                    <nav class="">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$previous'"; } ?>><</a>
+                            </li>
+                            <?php 
+                            for($x=1;$x<=$total_halaman;$x++){
+                                ?> 
+                                <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
+                                <?php
+                            }
+                            ?>				
+                            <li class="page-item">
+                                <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?halaman=$next'"; } ?>>></a>
+                            </li>
+                        </ul>
+                    </nav>
                     <button style="margin-left: 10px" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tambahstaff">Tambah Staff</button>
                 </div>
                 </div>
