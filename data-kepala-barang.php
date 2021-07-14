@@ -87,8 +87,8 @@
                                 <li class="page-item">
                                     <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$previous'"; } ?>><</a>
                                 </li>
-                                <?php 
-                                for($x=1;$x<=$total_halaman;$x++){
+                                    <?php 
+                                        for($x=1;$x<=$total_halaman;$x++){
                                     ?> 
                                     <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
                                     <?php

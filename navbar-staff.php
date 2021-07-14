@@ -29,7 +29,7 @@
                     <a class="nav-link active" aria-current="page" href="data-staff-barang.php">Barang</a>
                 </li>
                 <li class="nav-item mx-3" style="font-size: 20px;">
-                    <a class="nav-link active" aria-current="page" href="data-transaksi.php">Transaksi</a>
+                    <a class="nav-link active" aria-current="page" href="staff-service.php">Service</a>
                 </li>
                 <li>
                 <a id="Logoutbtn" class="btn btn-primary nav-link active" aria-current="page" href="logout.php" onclick="return confirm('Yakin ingin logout ?')">LOGOUT</a>
