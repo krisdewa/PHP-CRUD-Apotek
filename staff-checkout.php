@@ -96,7 +96,7 @@
                     
 
                     echo "<script> alert('Checkout Selesai !!!'); </script>";
-                    echo "<script> staff-location='staff-nota.php'; </script>";
+                    echo "<script> location='staff-nota.php'; </script>";
             }
         ?>
     </div>
