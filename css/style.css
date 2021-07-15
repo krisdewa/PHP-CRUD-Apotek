@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap');
+
+
 * {
   text-decoration: none;
   margin: 0;
@@ -8,7 +11,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
   background: #CCFFBD;
 }
 
@@ -95,9 +98,9 @@ section {
 
 h2 {
   font-family: 'Assistant', sans-serif;
-  font-weight: 800;
   font-size: 50px;
   line-height: 33px;
+  /* font-weight: 900; */
 
   margin-top: -20px;
   margin-bottom: 20px;

@@ -1,20 +1,25 @@
 <?php
     include_once("../connectdb.php");
-    login();
     include_once("navbar.php");
 
+    // include_once("../function/function.php");
+    // error_reporting(0);
+
+    // PAGINATION TABLE 
     $batas = 4;
     $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
     $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
 
-    $previous = $halaman - 1;
-    $next = $halaman + 1;
+    $sebelumnya = $halaman - 1;
+    $selanjutnya = $halaman + 1;
     
-    $data = mysqli_query($koneksi,"select * from barang");
+    $data = mysqli_query($koneksi, "SELECT * FROM barang");
     $jumlah_data = mysqli_num_rows($data);
     $total_halaman = ceil($jumlah_data / $batas);
 
-    $ambil = $koneksi -> query("SELECT * FROM barang LIMIT $halaman_awal, $batas");
+    // Tampilkan data sesuai dengan batas
+    $data = mysqli_query($koneksi, "SELECT * FROM barang LIMIT $halaman_awal, $batas");
+
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +30,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Service</title> 
     <link rel="stylesheet" href="../css/style_tab.css" />
+
+    <!-- Bootstrap dan Font -->
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -33,41 +40,92 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
+                        
+                        <!-- FORM SEARCHING -->
+                        <form action="" method="get">
+                            <div class="input-group">
+                                <!-- Buat sebuah textbox dengan name cari -->
+                                <input type="text" class="form-control" placeholder="Pencarian..." id="keyword" name="cari" autofocus autocomplete="off" required> &nbsp;
+                                <span class="input-group-btn">
+                                    <!-- Buat sebuah tombol search dengan type submit -->
+                                    <button class="btn btn-primary" type="submit" id="btn-search" name="">SEARCH</button>
+                                    <a href="service.php" class="btn btn-warning">RESET</a>
+                                </span>
+                            </div>
+                        </form>
+                        <!--  -->
 
-                        <?php while($produk = $ambil -> fetch_assoc()) { ?>
+                        <!-- PENCARIAN BARANG -->
+                        <?php 
+                        if(isset($_GET['cari'])){
+                            $cari = $_GET['cari'];
+                            $data = mysqli_query($koneksi, "SELECT * FROM barang WHERE nama_barang like '%".$cari."%'");					
+                        }else{
+                            $data = mysqli_query($koneksi, "SELECT * FROM barang LIMIT $halaman_awal, $batas");		
+                        }
+
+                        while($produk = mysqli_fetch_array($data)) { 
+                        ?>
                         <div class="col-sm-6"> <br>
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title"><?= $produk['nama_barang'] ?></h5>
-                                    <p class="card-text">Harga : RP.  <?= number_format($produk['harga_jual']) ?></p>
+                                    <p class="card-text">Harga : Rp.  <?= number_format($produk['harga_jual']) ?></p>
                                     <p class="card-text">Stock : <?= $produk['stok'] ?></p>
                                     <a href="beli.php?id=<?php echo $produk["ID_Barang"]; ?>" class="btn btn-primary">Beli</a>
                                 </div>
                             </div>
                         </div>
                         <?php } ?>
-                        <nav>
-                            <br><br>
+                        <!--  -->
+
+
+                        <!-- PAGINATION TABLE -->
+                        <nav> <br>
                             <ul class="pagination justify-content-center">
-                                <li class="page-item">
-                                    <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$previous'"; } ?>>Previous</a>
-                                </li>
-                                <?php 
-                                for($x=1;$x<=$total_halaman;$x++){
-                                    ?> 
-                                    <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
-                                    <?php
-                                }
-                                ?>				
-                                <li class="page-item">
-                                    <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?halaman=$next'"; } ?>>Next</a>
-                                </li>
+                                <!-- Tombol Sebelumnya -->
+                                <?php if($halaman <= 1) {?>
+                                    <li class="page-item invisible">
+                                        <a class="page-link" <?php echo "href='?halaman=$sebelumnya'"; ?>> sebelumnya </a>
+                                    </li>
+                                <?php } else { ?>
+                                    <li class="page-item">
+                                        <a class="page-link" <?php echo "href='?halaman=$sebelumnya'"; ?>> sebelumnya </a>
+                                    </li>
+                                <?php } ?>
+                                <!--  -->
+
+                                <!--  -->
+                                <?php for($x = 1; $x <= $total_halaman; $x++){ ?> 
+                                    <?php if($x != $halaman){?> 
+                                            <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"> <?php echo $x; ?></a></li>
+                                    <?php }else{ ?>
+                                            <li class="page-item active"><a class="page-link "><?php echo $x; ?> </a> </li>
+                                    <?php } ?>	        
+                                <?php } ?>	
+                                <!--  -->
+
+
+                                <!-- Tombol Selanjutnya -->
+                                <?php if($halaman >= $total_halaman) {?>
+                                    <li class="page-item invisible">
+                                        <a  class="page-link" <?php echo "href='?halaman=$selanjutnya'"; ?>> selanjutnya </a>
+                                    </li>
+                                <?php } else { ?>
+                                    <li class="page-item">
+                                        <a  class="page-link" <?php echo "href='?halaman=$selanjutnya'"; ?>> selanjutnya </a>
+                                    </li>
+                                <?php } ?>
+                                <!--  -->
+
                             </ul>
                         </nav>
+                    
+                    <!-- Tombol untuk menuju keranjang -->
                     <div class="footer">
-                    <br>
                         <a href="keranjang.php" class="btn btn-success float-xl-left">Keranjang &raquo;</a>
                     </div>
+
                 </div>
             </div>
         </div>
