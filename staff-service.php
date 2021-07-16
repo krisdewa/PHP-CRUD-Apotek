@@ -1,4 +1,5 @@
 <?php
+    $pageactive = "service";
     include_once("connectdb.php");
     login();
     include_once("navbar-staff.php");
@@ -79,7 +80,7 @@
                             <ul class="pagination justify-content-center">
                                 <!-- Tombol Sebelumnya -->
                                 <?php if($halaman <= 1) {?>
-                                    <li class="page-item invisible">
+                                    <li class="page-item disabled">
                                         <a class="page-link" <?php echo "href='?halaman=$sebelumnya'"; ?>> sebelumnya </a>
                                     </li>
                                 <?php } else { ?>
@@ -102,7 +103,7 @@
 
                                 <!-- Tombol Selanjutnya -->
                                 <?php if($halaman >= $total_halaman) {?>
-                                    <li class="page-item invisible">
+                                    <li class="page-item disabled">
                                         <a  class="page-link" <?php echo "href='?halaman=$selanjutnya'"; ?>> selanjutnya </a>
                                     </li>
                                 <?php } else { ?>

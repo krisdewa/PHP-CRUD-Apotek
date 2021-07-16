@@ -51,9 +51,9 @@
                     <tr>
                         <td><?php echo $nomer ?></td>
                         <td><?php echo $pecah["nama_barang"]; ?></td>
-                        <td> RP. <?php echo number_format($pecah["harga_jual"]) ?></td>
+                        <td> Rp. <?php echo number_format($pecah["harga_jual"]) ?></td>
                         <td><?php echo $jumlah ?></td>
-                        <td> RP. <?php echo number_format($total) ?></td>
+                        <td> Rp. <?php echo number_format($total) ?></td>
                         <td>
                             <center>
                                  <a class="btn btn-danger" href="hapusbelanja.php?id=<?=$id_produk ?>"><i class="bi bi-trash"></i></a>

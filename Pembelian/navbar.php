@@ -23,13 +23,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item mx-3" style="font-size: 20px;">
-                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                    <a <?php if($pageactive == "index") echo "class='nav-link active'";?> class="nav-link" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item mx-3" style="font-size: 20px;">
-                    <a class="nav-link active" aria-current="page" href="service.php">Service</a>
+                    <a <?php if($pageactive == "service") echo "class='nav-link active'";?>class="nav-link" aria-current="page" href="service.php">Service</a>
                 </li>
                 <li class="nav-item mx-3" style="font-size: 20px;">
-                    <a class="nav-link active" aria-current="page" href="supplier.php">About</a>
+                    <a class="nav-link" aria-current="page" href="#">About</a>
                 </li>
             </ul>
         </div>

@@ -1,7 +1,9 @@
 <?php
-    include_once("connectdb.php");
-    login();
-    include_once("navbar-kepala.php")
+    
+    $pageactive = "barang";
+    include_once("connectdb.php"); login();
+    include_once("navbar-kepala.php");
+    include_once("data-kepala-barang.php");
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +29,21 @@
                 </div>
                 <div class="card-body"> 
                     <table style="background-color: white;" class="table-tab">
+
+                        <!-- FORM SEARCHING -->
+                        <form action="" method="get">
+                            <div class="input-group">
+                                <!-- Buat sebuah textbox dengan name cari -->
+                                <input type="text" class="form-control" placeholder="Pencarian..." id="keyword" name="cari" autofocus autocomplete="off" required> &nbsp;
+                                <span class="input-group-btn">
+                                    <!-- Buat sebuah tombol search dengan type submit -->
+                                    <button class="btn btn-primary" type="submit" id="btn-search" name="">SEARCH</button>
+                                    <a href="data-kepala-barang.php" class="btn btn-warning">RESET</a>
+                                </span>
+                            </div>
+                        </form><br>
+                        <!--  -->
+
                         <thead>
                             <tr style="color: black;">
                                 <th scope="col">No</th>
@@ -47,31 +64,41 @@
                                 $batas = 5;
                                 $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
                                 $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
-                            
-                                $previous = $halaman - 1;
-                                $next = $halaman + 1;
+
+                                $sebelumnya = $halaman - 1;
+                                $selanjutnya = $halaman + 1;
                                 
-                                $data = mysqli_query($koneksi,"select * from barang");
+                                $data = mysqli_query($koneksi, "SELECT * FROM barang");
                                 $jumlah_data = mysqli_num_rows($data);
                                 $total_halaman = ceil($jumlah_data / $batas);
-                                $query = mysqli_query($koneksi,"select * from barang LIMIT $halaman_awal, $batas");
 
-                                $no = $halaman_awal+1;
-                                while($result = mysqli_fetch_array($query)){
+                                // Tampilkan data sesuai dengan batas
+                                $data = mysqli_query($koneksi, "SELECT * FROM barang LIMIT $halaman_awal, $batas");
+
+                                if(isset($_GET['cari'])){
+                                    $cari = $_GET['cari'];
+                                    $data = mysqli_query($koneksi, "SELECT * FROM barang WHERE nama_barang like '%".$cari."%'");					
+                                }else{
+                                    $data = mysqli_query($koneksi, "SELECT * FROM barang LIMIT $halaman_awal, $batas");		
+                                }
+
+                                $no = $halaman_awal + 1;
+
+                                while($produk = mysqli_fetch_array($data)) { 
                             ?>
                             <tr>
                                 <td> <?= $no++ ?></td>
-                                <td> <?= $result['ID_Barang'] ?></td>
-                                <td> <?= $result['nama_barang'] ?></td>
-                                <td> <?= $result['kategori'] ?></td>
-                                <td> <?= $result['harga_jual'] ?></td>
-                                <td> <?= $result['harga_beli'] ?></td>
-                                <td> <?= $result['stok'] ?></td>
+                                <td> <?= $produk['ID_Barang'] ?></td>
+                                <td> <?= $produk['nama_barang'] ?></td>
+                                <td> <?= $produk['kategori'] ?></td>
+                                <td> <?= $produk['harga_jual'] ?></td>
+                                <td> <?= $produk['harga_beli'] ?></td>
+                                <td> <?= $produk['stok'] ?></td>
                                 <td>
-                                    <a class="btn btn-warning" href="function/edit-kepala-barang.php?ID_Barang=<?=$result['ID_Barang'];?>"><i class="bi bi-pencil"></i></a>
+                                    <a class="btn btn-warning" href="function/edit-kepala-barang.php?ID_Barang=<?=$produk['ID_Barang'];?>"><i class="bi bi-pencil"></i></a>
                                 </td>
                                 <td>
-                                    <a class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus ?')" href="function/hapus-kepala-barang.php?ID_Barang=<?=$result['ID_Barang'];?>"><i class="bi bi-trash"></i></a>
+                                    <a class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus ?')" href="function/hapus-kepala-barang.php?ID_Barang=<?=$produk['ID_Barang'];?>"><i class="bi bi-trash"></i></a>
                                 </td>
                             </tr>
 
@@ -82,24 +109,47 @@
                         </tbody>
                     </table>
                     <div class="bawah">
-                        <nav class="">
+                        <!-- PAGINATION TABLE -->
+                        <nav> <br>
                             <ul class="pagination justify-content-center">
-                                <li class="page-item">
-                                    <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$previous'"; } ?>><</a>
-                                </li>
-                                    <?php 
-                                        for($x=1;$x<=$total_halaman;$x++){
-                                    ?> 
-                                    <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
-                                    <?php
-                                }
-                                ?>				
-                                <li class="page-item">
-                                    <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?halaman=$next'"; } ?>>></a>
-                                </li>
+                                <!-- Tombol Sebelumnya -->
+                                <?php if($halaman <= 1) {?>
+                                    <li class="page-item disabled">
+                                        <a class="page-link" <?php echo "href='?halaman=$sebelumnya'"; ?>> sebelumnya </a>
+                                    </li>
+                                <?php } else { ?>
+                                    <li class="page-item">
+                                        <a class="page-link" <?php echo "href='?halaman=$sebelumnya'"; ?>> sebelumnya </a>
+                                    </li>
+                                <?php } ?>
+                                <!--  -->
+
+                                <!--  -->
+                                <?php for($x = 1; $x <= $total_halaman; $x++){ ?> 
+                                    <?php if($x != $halaman){?> 
+                                            <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"> <?php echo $x; ?></a></li>
+                                    <?php }else{ ?>
+                                            <li class="page-item active"><a class="page-link"><?php echo $x; ?> </a> </li>
+                                    <?php } ?>	        
+                                <?php } ?>	
+                                <!--  -->
+
+
+                                <!-- Tombol Selanjutnya -->
+                                <?php if($halaman >= $total_halaman) {?>
+                                    <li class="page-item disabled">
+                                        <a  class="page-link" <?php echo "href='?halaman=$selanjutnya'"; ?>> selanjutnya </a>
+                                    </li>
+                                <?php } else { ?>
+                                    <li class="page-item">
+                                        <a  class="page-link" <?php echo "href='?halaman=$selanjutnya'"; ?>> selanjutnya </a>
+                                    </li>
+                                <?php } ?>
+                                <!--  -->
+
                             </ul>
                         </nav>
-                        <button style="margin-left: 10px" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tambahbarang">Tambah Barang</button>
+                        <button style="margin-left: 20px; margin-top:-60px;" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tambahbarang">Tambah Barang</button>
                     </div>
                 </div>
             </div>

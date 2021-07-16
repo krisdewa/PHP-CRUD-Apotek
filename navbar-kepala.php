@@ -23,16 +23,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item mx-3" style="font-size: 20px;">
-                    <a class="nav-link active" aria-current="page" href="halaman-kepala.php">Home</a>
+                    <a <?php if($pageactive == "home") echo "class='nav-link active'";?> class="nav-link" aria-current="page" href="halaman-kepala.php">Home</a>
+                </li>
+                <li class="nav-item mx-3" style="font-size: 20px;">                
+                    <a <?php if($pageactive == "staff") echo "class='nav-link active'";?> class="nav-link" aria-current="page" href="data-staff.php">Staff</a>
                 </li>
                 <li class="nav-item mx-3" style="font-size: 20px;">
-                    <a class="nav-link active" aria-current="page" href="data-staff.php">Staff</a>
+                    <a <?php if($pageactive == "supplier") echo "class='nav-link active'";?> class="nav-link" aria-current="page" href="data-supplier.php">Supplier</a>
                 </li>
                 <li class="nav-item mx-3" style="font-size: 20px;">
-                    <a class="nav-link active" aria-current="page" href="data-supplier.php">Supplier</a>
-                </li>
-                <li class="nav-item mx-3" style="font-size: 20px;">
-                    <a class="nav-link active" aria-current="page" href="data-kepala-barang.php">Barang</a>
+                    <a <?php if($pageactive == "barang") echo "class='nav-link active'";?> class="nav-link" aria-current="page" href="data-kepala-barang.php">Barang</a>
                 </li>
                 <li>
                     <a id="Logoutbtn" class="btn btn-primary nav-link active" aria-current="page" href="logout.php" onclick="return confirm('Yakin ingin logout ?')">LOGOUT</a>

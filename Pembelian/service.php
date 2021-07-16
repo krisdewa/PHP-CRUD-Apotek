@@ -1,12 +1,13 @@
 <?php
+    $pageactive = "service";
     include_once("../connectdb.php");
     include_once("navbar.php");
-
+    
     // include_once("../function/function.php");
     // error_reporting(0);
 
     // PAGINATION TABLE 
-    $batas = 4;
+    $batas = 6;
     $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
     $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
 
@@ -85,7 +86,7 @@
                             <ul class="pagination justify-content-center">
                                 <!-- Tombol Sebelumnya -->
                                 <?php if($halaman <= 1) {?>
-                                    <li class="page-item invisible">
+                                    <li class="page-item disabled">
                                         <a class="page-link" <?php echo "href='?halaman=$sebelumnya'"; ?>> sebelumnya </a>
                                     </li>
                                 <?php } else { ?>
@@ -108,7 +109,7 @@
 
                                 <!-- Tombol Selanjutnya -->
                                 <?php if($halaman >= $total_halaman) {?>
-                                    <li class="page-item invisible">
+                                    <li class="page-item disabled">
                                         <a  class="page-link" <?php echo "href='?halaman=$selanjutnya'"; ?>> selanjutnya </a>
                                     </li>
                                 <?php } else { ?>

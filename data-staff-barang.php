@@ -1,6 +1,6 @@
 <?php
-    include_once("connectdb.php");
-    login();
+    $pageactive = "barang";
+    include_once("connectdb.php");login();
     include_once("navbar-staff.php");
     include_once("data-staff-barang.php");
 ?>
@@ -105,13 +105,13 @@
 
                         </tbody>
                     </table>
-
-                    <!-- PAGINATION TABLE -->
+                    <div class="bawah">
+                        <!-- PAGINATION TABLE -->
                         <nav> <br>
                             <ul class="pagination justify-content-center">
                                 <!-- Tombol Sebelumnya -->
                                 <?php if($halaman <= 1) {?>
-                                    <li class="page-item invisible">
+                                    <li class="page-item disabled">
                                         <a class="page-link" <?php echo "href='?halaman=$sebelumnya'"; ?>> sebelumnya </a>
                                     </li>
                                 <?php } else { ?>
@@ -121,7 +121,7 @@
                                 <?php } ?>
                                 <!--  -->
 
-                                <!--  -->
+                                <!-- number array -->
                                 <?php for($x = 1; $x <= $total_halaman; $x++){ ?> 
                                     <?php if($x != $halaman){?> 
                                             <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"> <?php echo $x; ?></a></li>
@@ -131,10 +131,9 @@
                                 <?php } ?>	
                                 <!--  -->
 
-
                                 <!-- Tombol Selanjutnya -->
                                 <?php if($halaman >= $total_halaman) {?>
-                                    <li class="page-item invisible">
+                                    <li class="page-item disabled">
                                         <a  class="page-link" <?php echo "href='?halaman=$selanjutnya'"; ?>> selanjutnya </a>
                                     </li>
                                 <?php } else { ?>
@@ -146,7 +145,7 @@
 
                             </ul>
                         </nav>
-                        <button style="margin-left: 10px" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tambahsupliyer">Tambah Barang</button>
+                        <button style="margin-left: 20px; margin-top:-60px;" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tambahsupliyer">Tambah Barang</button>
                     </div>
                 </div>
             </div>

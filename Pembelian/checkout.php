@@ -45,9 +45,9 @@
                     <tr>
                         <td><?php echo $nomer ?></td>
                         <td><?php echo $pecah["nama_barang"]; ?></td>
-                        <td> RP. <?php echo number_format($pecah["harga_jual"]) ?></td>
+                        <td> Rp. <?php echo number_format($pecah["harga_jual"]) ?></td>
                         <td><?php echo $jumlah ?></td>
-                        <td> RP. <?php echo number_format($total) ?></td>
+                        <td> Rp. <?php echo number_format($total) ?></td>
                     </tr>
                     <?php $nomer++ ?>
                     <?php $totalbalanja += $total; ?>

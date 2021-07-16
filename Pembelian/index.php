@@ -1,3 +1,5 @@
+<?php $pageactive = "index"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

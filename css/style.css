@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap");
 
 * {
   text-decoration: none;
@@ -12,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   /* font-family: 'Open Sans', sans-serif; */
-  background: #CCFFBD;
+  background: #ccffbd;
 }
 
 .wrapper {
@@ -76,7 +75,7 @@ section {
   margin-bottom: 50px;
 }
 
-.top{
+.top {
   margin-top: 40%;
 }
 
@@ -88,23 +87,23 @@ section {
 .kolom .deskripsi {
   font-size: 20px;
   font-weight: bold;
-  font-family: 'comic sans ms';
-  color: #FF4F5A;
+  font-family: "comic sans ms";
+  color: #ff4f5a;
 }
 
-.top{
+.top {
   margin-top: 90px;
 }
 
 h2 {
-  font-family: 'Assistant', sans-serif;
+  font-family: "Assistant", sans-serif;
   font-size: 50px;
   line-height: 33px;
   /* font-weight: 900; */
 
   margin-top: -20px;
   margin-bottom: 20px;
-  color: #2F5D62;
+  color: #2f5d62;
   width: 100%;
   line-height: 50px;
 }
@@ -143,11 +142,11 @@ a.tbl-signin:hover {
 } */
 
 a.telusuri {
-  background: #7ECA9C;
+  background: #7eca9c;
   border-radius: 10px;
   margin-top: 20px;
   padding: 10px 10px 10px 20px;
-  color: #2F5D62;
+  color: #2f5d62;
   cursor: pointer;
   font-weight: bold;
 }
@@ -162,8 +161,8 @@ p {
   padding: 10px 0px 10px 0px;
 }
 
-p.desk{
-  color: #2F5D62;
+p.desk {
+  color: #2f5d62;
 }
 
 .tengah {
@@ -171,16 +170,16 @@ p.desk{
   width: 100%;
 }
 
-.background{
+.background {
   /* background-color: #ff2e63; */
 }
 
 #contact {
   /* background: #ffffff; */
   background: #50b67a;
-  color: #2F5D62;
+  color: #2f5d62;
   padding: 50px 0px 50px 0px;
-  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
 .footer {
@@ -207,7 +206,7 @@ h3 {
 
 #copyright {
   /* border-top: 1px solid #ffffff; */
-  background: #7ECA9C;
+  background: #7eca9c;
   color: #ffffff;
   text-align: center;
   width: 100%;
@@ -217,7 +216,6 @@ h3 {
 /* tr:nth-child(even) {
   background-color: #dddddd;
 } */
-
 
 @media screen and (max-width: 991.98px) {
   .wrapper {
