@@ -64,7 +64,7 @@
                         }else{
                             $data = mysqli_query($koneksi, "SELECT * FROM barang LIMIT $halaman_awal, $batas");		
                         }
-
+                        
                         while($produk = mysqli_fetch_array($data)) { 
                         ?>
                         <div class="col-sm-6"> <br>

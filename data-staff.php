@@ -159,7 +159,7 @@
     <!-- Modal -->
     <div class="modal fade" id="tambahstaff" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div style="background-color: #2F5D62;" class="modal-content">
+        <div style="background-color: #7ECA9C;" class="modal-content">
         <div class="border-0 modal-header">
             <h5 class="text-light fw-bolder modal-title" id="exampleModalLabel">APTK24</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
