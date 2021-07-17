@@ -5,7 +5,7 @@
     include_once("navbar-staff.php");
 
     // PAGINATION TABLE 
-    $batas = 6;
+    $batas = 8;
     $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
     $halaman_awal = ($halaman>1) ? ($halaman * $batas) - $batas : 0;	
 
@@ -62,13 +62,16 @@
 
                         while($produk = mysqli_fetch_array($data)) { 
                         ?>
-                        <div class="col-sm-6"> <br>
+                        <div class="col-sm-3"> <br>
                             <div class="card">
                                 <div class="card-body">
+                                    <center>
                                     <h5 class="card-title"><?= $produk['nama_barang'] ?></h5>
+                                    <img src="gambar/<?php echo $produk['foto'] ?>" width="250">
                                     <p class="card-text">Harga : RP.  <?= number_format($produk['harga_jual']) ?></p>
                                     <p class="card-text">Stock : <?= $produk['stok'] ?></p>
-                                    <a href="staff-beli.php?id=<?php echo $produk["ID_Barang"]; ?>" class="btn btn-primary">Beli</a>
+                                    <a href="staff-beli.php?id=<?php echo $produk["ID_Barang"]; ?>" class="btn btn-primary btn-block"> Beli </a>
+                                    </center>
                                 </div>
                             </div>
                         </div>

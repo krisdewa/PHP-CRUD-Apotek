@@ -17,10 +17,32 @@
         $harga_beli = $_POST['harga_beli'];
         $stok = $_POST['stok'];
 
-        $sql_edit = "UPDATE barang SET nama_barang = '$nama_barang', kategori = '$kategori', harga_jual = '$harga_jual', harga_beli = '$harga_beli', stok ='$stok' WHERE ID_Barang = '$ID_Barang' ";
-        mysqli_query($koneksi, $sql_edit);
+        $rand = rand();
+        $ekstensi =  array('png','jpg','jpeg','gif','webp');
+        $filename = $_FILES['foto']['name'];
+        $ukuran = $_FILES['foto']['size'];
+        $ext = pathinfo($filename, PATHINFO_EXTENSION);
+ 
+        if(!in_array($ext,$ekstensi) ) {
+            echo "<script> alert('Ekstensi tidak sesuai !!!'); </script>";
+		    echo "<script> location='../data-staff-barang.php'; </script>";
+        }else{
+            if($ukuran < 1044070){		
+                $foto = $rand.'_'.$filename;
+                move_uploaded_file($_FILES['foto']['tmp_name'], '../gambar/'.$rand.'_'.$filename);
 
-        header("Location:../data-staff-barang.php");
+                $sql_edit = "UPDATE barang SET nama_barang = '$nama_barang', kategori = '$kategori', harga_jual = '$harga_jual', harga_beli = '$harga_beli', stok ='$stok', foto = '$foto' WHERE ID_Barang = '$ID_Barang' ";
+                mysqli_query($koneksi, $sql_edit);
+
+                echo "<script> alert('Berhasil Menambahkan Data !!!'); </script>";
+		        echo "<script> location='../data-staff-barang.php'; </script>";
+
+            }else{
+                echo "<script> alert('Ukuran terlalu besar !!!'); </script>";
+		        echo "<script> location='../data-staff-barang.php'; </script>";
+            }
+        }
+        // header("Location:../data-staff-barang.php");
 }
 
 ?>
@@ -39,7 +61,7 @@
     <div class="container-sm"> <br>
         <h1 class="display-5">UPDATE BARANG</h1>
         <hr>
-        <form action="edit-staff-barang.php" method="POST">
+        <form action="edit-staff-barang.php" method="POST" enctype="multipart/form-data">
             <table><br>
                 <div class="mb-3 row">
                     <label class="col-sm-2 col-form-label" hidden>ID Barang</label>
@@ -77,9 +99,16 @@
                         <input type="number" class="form-control" name="stok" value="<?= $result['stok'];?>" >
                     </div>
                 </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label">Gambar</label>
+                    <div class="col-sm-4">
+                        <label class="" type="text" name="foto"><?= $result['foto'];?></label>
+                        <input type="file" class="form-control" name="foto" value="<?= $result['foto'];?>" >
+                    </div>
+                </div>
 
             </table><br>
-            <div class="float-xl-right">
+            <div class="float-xl-right" >
                 <button class="btn btn-warning" name="submit" type="submit">Update</button>
                 <a href="../data-staff-barang.php" class="btn btn-danger"> Cancel </a>
             </div>

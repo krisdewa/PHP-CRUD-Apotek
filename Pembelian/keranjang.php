@@ -1,8 +1,8 @@
 <?php
-
+    $pageactive = "service";
     session_start();
 
-    include_once("connectdb.php");
+    include_once("../connectdb.php");
 
     include_once("navbar.php");
 

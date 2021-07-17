@@ -59,7 +59,7 @@
                         </thead>
 
                         <tbody>
-                            <!-- PAGINATION TABLE -->
+                            <!-- SEARCH DAN PAGINATION TABLE -->
                             <?php
                                 $batas = 5;
                                 $halaman = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
@@ -75,6 +75,7 @@
                                 // Tampilkan data sesuai dengan batas
                                 $data = mysqli_query($koneksi, "SELECT * FROM barang LIMIT $halaman_awal, $batas");
 
+                                // SEARCH
                                 if(isset($_GET['cari'])){
                                     $cari = $_GET['cari'];
                                     $data = mysqli_query($koneksi, "SELECT * FROM barang WHERE nama_barang like '%".$cari."%'");					
@@ -155,6 +156,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Modal -->
     <div class="modal fade" id="tambahbarang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

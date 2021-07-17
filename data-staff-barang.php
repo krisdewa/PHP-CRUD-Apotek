@@ -50,6 +50,7 @@
                                 <th scope="col">Harga Jual</th>
                                 <th scope="col">Harga Beli</th>
                                 <th scope="col">Stok</th>
+                                <th scope="col">Gambar</th>
                                 <th scope="col">Edit</th>
                                 <th scope="col">Delete</th>
                             </tr>
@@ -92,6 +93,7 @@
                                 <td> <?= $produk['harga_jual'] ?></td>
                                 <td> <?= $produk['harga_beli'] ?></td>
                                 <td> <?= $produk['stok'] ?></td>
+                                <td> <img src="gambar/<?php echo $produk['foto'] ?>" width="50"></td>
                                 <td>
                                     <a class="btn btn-warning" href="function/edit-staff-barang.php?ID_Barang=<?=$produk['ID_Barang'];?>"><i class="bi bi-pencil"></i></a>
                                 </td>
@@ -161,7 +163,7 @@
         </div>
             <h5 style="color: black; margin-top: 8px;" class="text-light fw-bolder text-center">TAMBAH BARANG</h5>
         <div class="modal-body">
-            <form action="function/add-staff-barang.php" method="POST">
+            <form action="function/add-staff-barang.php" method="POST" enctype="multipart/form-data">
                 <div style="color: white;" class="row">
                     <div class="form-group col-md-6">
                         <label style="margin-bottom: 5px;" for="tambahid">ID Barang</label>
@@ -186,6 +188,11 @@
                     <div class="form-group col-md-6">
                         <label style="margin-bottom: 5px;" for="inputPassword4">Stok</label>
                         <input type="number" class="form-control" name="stok" placeholder="">
+                    </div>
+                    <div class="form-group col-md-12"><br>
+                        <label style="margin-bottom: 5px;" for="">Upload Foto</label>
+                        <input type="file" class="form-control" name="foto" placeholder=""><br>
+                        <!-- <button type="submit" class="btn btn-success" name="upload" value="Upload">Upload Foto</button> -->
                     </div>
                 </div>
                 <div class="border-0 modal-footer">
