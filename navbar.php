@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #7ECA9C;">
     <div class="container">
-        <a class="navbar-brand" href="index.php" style="font-size: 40px;">APOTEK
+        <a class="navbar-brand" href="index.php" style="font-size: 40px; font-family: 'Assistant', sans-serif; font-weight: bold;">APTK24
             <!-- <img src="" alt="" class="src"> -->
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,11 +22,11 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item mx-3" style="font-size: 20px;">
+                <li class="nav-item mx-3" style="font-size: 20px; font-family: 'Assistant', sans-serif;">
                     <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
-                <li class="nav-item mx-3" style="font-size: 20px;">
-                    <a id="loginbtn" class="btn btn-primary nav-link active" aria-current="page" href="login.php">LOGIN</a>
+                <li class="nav-item mx-3">
+                    <a id="loginbtn" class="btn btn-primary nav-link active" aria-current="page" href="login.php" style="font-size: 21px;font-family: 'Assistant', sans-serif; font-weight: 600; letter-spacing: 1px">Login</a>
                 </li>
             </ul>
         </div>
