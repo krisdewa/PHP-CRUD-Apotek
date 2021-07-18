@@ -27,9 +27,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Service</title> 
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style_tab.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />    
+
+    <!-- ANIMATED -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
     <div class="wrap-tab">
@@ -63,9 +68,9 @@
 
                         while($produk = mysqli_fetch_array($data)) { 
                         ?>
-                        <div class="col-sm-3"> <br>
+                        <div class="col-sm-3" data-aos="zoom-in-down"> <br>
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body ">
                                     <center>
                                     <h5 class="card-title service"><?= $produk['nama_barang'] ?></h5>
                                     <img src="gambar/<?php echo $produk['foto'] ?>" width="250">
@@ -128,5 +133,12 @@
             </div>
         </div>
     </div>
+
+    <!-- ANIMATED -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
 </body>
 </html>

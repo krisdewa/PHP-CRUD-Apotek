@@ -13,29 +13,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title> 
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- FONT ASSISTANT -->
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
   </head>
 
   <body>
-
-    <div class="wrapper">
+  
+  <div class="wrapper">
       <div class="top"></div>
       <!-- untuk home -->
-      <section id="home">
-        <div class="kolom">
+      <section id="home" class="home">
+        <div class="kolom" >
           <div class="top"></div>
           <h2>Mari Kita</h2>
           <h2>Sehat Bersama</h2>
-          <p class="desk">Jangan khawatir, kami akan selalu ada 24 jam melayani anda, dengan pelayanan yang profesional sesuai dengan bidangnya</>
+          <p class="desk">Jangan khawatir, kami akan selalu ada 24 jam melayani anda, dengan pelayanan yang profesional sesuai dengan bidangnya</> <br>
           <p><a href="" class="telusuri">Selengkapnya</a></p>
         </div>
-        <img src="asset/img/info1.svg" alt="" width="500">
+        <img src="asset/img/info1.svg" alt="" width="600" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1500">
       </section>
 
       <!-- untuk service -->
-      <section id="service">
-        <div><img src="asset/img/info.svg" alt="" width="500"/></div>
+      <section id="service" class="artikel">
+        <div class="gambar"><img src="asset/img/info.svg" alt="" width="600" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500"></div>
         <div class="background">
           <div class="kolom">
             <!-- <p class="deskripsi">You Will Need This</p> -->
@@ -49,9 +57,9 @@
     </div>
 
     <div id="contact">
-      <div class="wrapper">
+      <div class="wrapper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
         <div class="footer">
-          <div class="footer-section">
+          <div class="footer-section" >
             <h3>APTK24</h3>
           </div>
           <div class="footer-section">
@@ -74,5 +82,11 @@
     <div id="copyright">
       <div class="wrapper">&copy; 2021. <b>APOTEK</b> All Rights Reserved</div>
     </div>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
