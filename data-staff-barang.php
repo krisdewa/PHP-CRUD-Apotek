@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barang</title>
     <link rel="stylesheet" href="css/style_tab.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 
@@ -45,14 +46,13 @@
                             <tr style="color: black;">
                                 <th scope="col">No</th>
                                 <th scope="col">ID Barang</th>
+                                <th scope="col">Gambar</th>
                                 <th scope="col">Nama Barang</th>
                                 <th scope="col">Kategori Barang</th>
                                 <th scope="col">Harga Jual</th>
                                 <th scope="col">Harga Beli</th>
                                 <th scope="col">Stok</th>
-                                <th scope="col">Gambar</th>
-                                <th scope="col">Edit</th>
-                                <th scope="col">Delete</th>
+                                <th scope="col">Edit & Hapus</th>
                             </tr>
                         </thead>
 
@@ -88,16 +88,14 @@
                             <tr>
                                 <td> <?= $no++ ?></td>
                                 <td> <?= $produk['ID_Barang'] ?></td>
+                                <td> <img src="gambar/<?php echo $produk['foto'] ?>" width="50"></td>
                                 <td> <?= $produk['nama_barang'] ?></td>
                                 <td> <?= $produk['kategori'] ?></td>
                                 <td> <?= $produk['harga_jual'] ?></td>
                                 <td> <?= $produk['harga_beli'] ?></td>
                                 <td> <?= $produk['stok'] ?></td>
-                                <td> <img src="gambar/<?php echo $produk['foto'] ?>" width="50"></td>
                                 <td>
                                     <a class="btn btn-warning" href="function/edit-staff-barang.php?ID_Barang=<?=$produk['ID_Barang'];?>"><i class="bi bi-pencil"></i></a>
-                                </td>
-                                <td>
                                     <a class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus ?')" href="function/hapus-staff-barang.php?ID_Barang=<?=$produk['ID_Barang'];?>"><i class="bi bi-trash"></i></a>
                                 </td>
                             </tr>

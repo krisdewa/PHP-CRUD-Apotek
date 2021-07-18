@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap");
 
 * {
   text-decoration: none;
@@ -21,54 +21,9 @@ body {
   position: relative;
 }
 
-/* .logo a {
-  font-family: 'Assistant', sans-serif;
-  font-size: 50px;
-  font-weight: 800;
-  float: left;
-  color: #FF4F5A;
-} */
-
 .menu {
   float: right;
 }
-
-/* nav {
-  width: 100%;
-  margin: auto;
-  display: flex;
-  line-height: 80px;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  background: #ffffff;
-  z-index: 1;
-  border-bottom: 1px solid #000000;
-  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2); 
-} */
-
-/* nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-nav ul li {
-  float: left;
-} */
-
-/* nav ul li a {
-  color: #FF4F5A;
-  font-weight: bold;
-  text-align: center;
-  padding: 0px 16px 0px 16px;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-} */
 
 section {
   margin: auto;
@@ -88,7 +43,7 @@ section {
 .kolom .deskripsi {
   font-size: 20px;
   font-weight: bold;
-  font-family: 'comic sans ms';
+  font-family: "comic sans ms";
   color: #ff4f5a;
 }
 
@@ -109,39 +64,6 @@ h2 {
   width: 100%;
   line-height: 50px;
 }
-
-/* a.tbl-signup {
-  background: #FF4F5A;
-  border-radius: 15px;
-  margin-top: 20px;
-  margin-left: 20px;
-  padding: 5px 25px 10px 25px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-a.tbl-signup:hover {
-  background: #b34040;
-  text-decoration: none;
-}
-
-a.tbl-signin {
-  background: #ffffff;
-  border-radius: 15px;
-  margin-top: 20px;
-  margin-left: 20px;  
-  padding: 4px 25px 8px 25px;
-  border: 2px solid red;
-  color: #FF4F5A;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-a.tbl-signin:hover {
-  background: #f1eded;
-  text-decoration: none;
-} */
 
 a.telusuri {
   background: #2f5d62;
@@ -253,4 +175,16 @@ h3 {
   .kartu-partner {
     width: 50%;
   }
+}
+
+.service {
+  /* font-size: 40px; */
+  font-family: "Assistant", sans-serif;
+  font-weight: bold;
+}
+
+.service1 {
+  /* font-size: 40px; */
+  font-family: "Assistant", sans-serif;
+  /* font-weight: bold; */
 }

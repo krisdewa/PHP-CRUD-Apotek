@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/navbar.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" >
@@ -30,6 +32,9 @@
                 </li>
                 <li class="nav-item mx-3" style="font-size: 20px;">
                     <a class="nav-link" aria-current="page" href="#">About</a>
+                </li>
+                <li>
+                    <a id="Logoutbtn" class="btn btn-primary nav-link active" aria-current="page" href="../logout.php" style="font-size: 21px;font-family: 'Assistant', sans-serif; font-weight: 600; letter-spacing: 1px" onclick="return confirm('Yakin ingin logout ?')">Logout</a>
                 </li>
             </ul>
         </div>

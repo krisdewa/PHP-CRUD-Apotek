@@ -46,7 +46,7 @@
                         <form action="" method="get">
                             <div class="input-group">
                                 <!-- Buat sebuah textbox dengan name cari -->
-                                <input type="text" class="form-control" placeholder="Pencarian..." id="keyword" name="cari" autofocus autocomplete="off" required> &nbsp;
+                                <input type="text" class="form-control" placeholder="Pencarian..." id="keyword" name="cari" autocomplete="off" required> &nbsp;
                                 <span class="input-group-btn">
                                     <!-- Buat sebuah tombol search dengan type submit -->
                                     <button class="btn btn-primary" type="submit" id="btn-search" name="">SEARCH</button>

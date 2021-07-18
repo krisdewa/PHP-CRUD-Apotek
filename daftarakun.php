@@ -49,7 +49,7 @@ if(isset($_POST['submit'])) {
                     </div>
                 </div>
 
-                <input type="hidden" class="form-control" name="level" value="staff">
+                <input type="hidden" class="form-control" name="level" value="pelanggan">
 
                 <div class="mb-3 row">
                     <label class="col-sm-2 col-form-label">username</label>
@@ -63,10 +63,6 @@ if(isset($_POST['submit'])) {
                     <input type="password" class="form-control" name="password">
                     </div>
                 </div>
-                <!-- <div class="mb-3 form-check margin-right: 10px">
-                    <input type="checkbox" class="form-check-input" id="staff">
-                    <label class="form-check-label" for="staff">Check me out</label>
-                </div> -->
             </table><br>
             <div class="">
             <button class="btn col-1" id="submit" name="submit" type="submit" style="background-color: #7ECA9C;">Daftar</button>

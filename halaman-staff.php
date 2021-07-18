@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php 
+    $pageactive = "home";
     include 'connectdb.php';
     login();
     include_once("navbar-staff.php") 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
 
   <head>
     <meta charset="UTF-8" />

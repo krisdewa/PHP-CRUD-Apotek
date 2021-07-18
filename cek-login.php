@@ -36,6 +36,13 @@ if($cek > 0){
 		// alihkan ke halaman dashboard pegawai
 		header("location:halaman-staff.php");
 
+	}else if($data['level']=="pelanggan"){
+		// buat session login dan username
+		$_SESSION['email'] = $email;
+		$_SESSION['level'] = "pelanggan";
+		// alihkan ke halaman dashboard pegawai
+		header("location:pembelian/index.php");
+
 	}else{
 		// alihkan ke halaman login kembali
 		// echo("")
@@ -44,7 +51,6 @@ if($cek > 0){
 		echo "<script> location='login.php'; </script>";
 	}
 
-	
 }else{
 	echo "<script> alert('Email atau password anda salah !!!'); </script>";
 	echo "<script> location='login.php'; </script>";

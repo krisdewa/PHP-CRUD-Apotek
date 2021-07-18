@@ -28,6 +28,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Service</title> 
     <link rel="stylesheet" href="css/style_tab.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -66,10 +67,10 @@
                             <div class="card">
                                 <div class="card-body">
                                     <center>
-                                    <h5 class="card-title"><?= $produk['nama_barang'] ?></h5>
+                                    <h5 class="card-title service"><?= $produk['nama_barang'] ?></h5>
                                     <img src="gambar/<?php echo $produk['foto'] ?>" width="250">
-                                    <p class="card-text">Harga : RP.  <?= number_format($produk['harga_jual']) ?></p>
-                                    <p class="card-text">Stock : <?= $produk['stok'] ?></p>
+                                    <p class="card-text service1">Harga : Rp.  <?= number_format($produk['harga_jual']) ?></p>
+                                    <p class="card-text service1">Stock : <?= $produk['stok'] ?></p>
                                     <a href="staff-beli.php?id=<?php echo $produk["ID_Barang"]; ?>" class="btn btn-primary btn-block"> Beli </a>
                                     </center>
                                 </div>

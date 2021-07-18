@@ -16,7 +16,7 @@
 
   <body>
 
-    <div class="wrapper">
+  <div class="wrapper">
       <div class="top"></div>
       <!-- untuk home -->
       <section id="home">
@@ -49,20 +49,20 @@
       <div class="wrapper">
         <div class="footer">
           <div class="footer-section">
-            <h3>Logo</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus quos fugiat saepe cupiditate ad quo molestias cum officiis! Ullam quos non quisquam hic eos ab obcaecati cum, consectetur quidem harum!</p>
+            <h3>APTK24</h3>
           </div>
           <div class="footer-section">
             <h3>About</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sunt possimus alias eveniet earum dolor dolore voluptatum facilis blanditiis, magnam tempore temporibus. Hic tempore quos beatae sit consequuntur sint praesentium.</p>
+            <p>Kami menyediakan berbagai macam obat dan vitamin yang Anda butuhkan. APTK24 akan melayani dengan ramah dan tentunya melayani Anda selama 24 jam</p>
           </div>
           <div class="footer-section">
             <h3>Address</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe ea voluptas distinctio esse eius et ducimus voluptates porro debitis corrupti corporis, maiores laborum maxime quasi, quae natus delectus quidem aperiam.</p>
+            <p>Jl. Karangsambung KM 20, Kebumen</p>
           </div>
           <div class="footer-section">
             <h3>Social Media</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, atque nulla! Sequi nesciunt dicta, modi perspiciatis adipisci vel explicabo error perferendis quia fugiat dolores ad ea esse deserunt suscipit facilis.</p>
+            <p>Instagram : @aptk24</p>
+            <p>Facebook  : aptk24Official</p>
           </div>
         </div>
       </div>

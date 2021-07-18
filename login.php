@@ -13,6 +13,12 @@
     <div class="container" >
         <div class="row justify-content-md-center ">
           <div id="login" class="col col-lg-4">
+            <div class="alert alert-warning alert-dismissible fade show d-none" role="alert">
+                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
             <h4 id="logintext" class="font-weight-bold">LOGIN</h4>
               <form class="" action="cek-login.php" method="post">
                     <div class="form-group">
