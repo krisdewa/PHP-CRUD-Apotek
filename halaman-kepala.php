@@ -26,34 +26,39 @@
 
   <body>
   
-  <div class="wrapper">
-      <div class="top"></div>
-      <!-- untuk home -->
-      <section id="home" class="home">
-        <div class="kolom" >
-          <div class="top"></div>
-          <h2>Mari Kita</h2>
-          <h2>Sehat Bersama</h2>
-          <p class="desk">Jangan khawatir, kami akan selalu ada 24 jam melayani anda, dengan pelayanan yang profesional sesuai dengan bidangnya</> <br>
-          <p><a href="" class="telusuri">Selengkapnya</a></p>
-        </div>
-        <img src="asset/img/info1.svg" alt="" width="600" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1500">
-      </section>
+    <!-- CONTENT -->
+    <div class="wrapper">
 
-      <!-- untuk service -->
-      <section id="service" class="artikel">
-        <div class="gambar"><img src="asset/img/info.svg" alt="" width="600" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500"></div>
-        <div class="background">
-          <div class="kolom">
-            <!-- <p class="deskripsi">You Will Need This</p> -->
-            <h2>Artikel Kesehatan</h2>
-            <p class="desk">Kami menyediakan layanan referensi untuk Anda, menambah wawasan tentang kesehatan</p>
-            <p><a id="s" href="" class="telusuri">Selengkapnya</a></p>
-          </div>
+    <div class="top"></div>
+    <!-- untuk home -->
+    <section id="home" class="home">
+      <div class="kolom" >
+        <div class="top"></div>
+        <h2 data-aos="fade-up" data-aos-duration="3000">Mari Kita</h2>
+        <h2 data-aos="fade-up" data-aos-duration="3000">Sehat Bersama</h2>
+        <p class="desk" data-aos="fade-up" data-aos-duration="3000">Jangan khawatir, kami akan selalu ada 24 jam melayani anda, dengan pelayanan yang profesional sesuai dengan bidangnya</> <br>
+        <p data-aos="fade-up" data-aos-duration="3000"><a href="" class="telusuri">Selengkapnya</a></p>
+      </div>
+      <!-- GAMBAR -->
+      <img src="asset/img/info1.svg" alt="" width="600" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1500">
+    </section>
+
+    <!-- untuk service -->
+    <section id="service" class="artikel">
+      <!-- GAMBAR -->
+      <div class="gambar"><img src="asset/img/info.svg" alt="" width="600" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500"></div>
+      <div class="background">
+        <div class="kolom">
+          <!-- <p class="deskripsi">You Will Need This</p> -->
+          <h2 data-aos="fade-up" data-aos-duration="3000">Artikel Kesehatan</h2>
+          <p class="desk" data-aos="fade-up" data-aos-duration="3000">Kami menyediakan layanan referensi untuk Anda, menambah wawasan tentang kesehatan</p>
+          <p data-aos="fade-up" data-aos-duration="3000"><a id="s" href="" class="telusuri">Selengkapnya</a></p>
         </div>
-      </section>
+      </div>
+    </section>
 
     </div>
+    <!--  -->
 
     <div id="contact">
       <div class="wrapper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
