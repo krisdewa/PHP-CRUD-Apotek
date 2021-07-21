@@ -1,6 +1,5 @@
 <?php 
 
-
 include_once("connectdb.php");
 
 if(isset($_POST['submit'])) {
@@ -9,7 +8,7 @@ if(isset($_POST['submit'])) {
     $email = $_POST['email'];
     $level = $_POST['level'];
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
 
     $sql_insert = "INSERT INTO user VALUES('$ID_User','$nama','$email','$level','$username', '$password')";
     mysqli_query($koneksi, $sql_insert);
@@ -28,11 +27,6 @@ if(isset($_POST['submit'])) {
     <link rel="stylesheet" href="css/style_addlogin.css">
 </head>
 <body>
-    <!-- <div class="container">
-        <br>
-        <h1 class="display-5">CREATE ACCOUNT</h1>
-        <p>Silahkan mengisi form dibawah untuk mendaftar akun</p>
-        <hr> -->
     <div class="container">
         <div class="row justify-content-md-center ">
         <div class="margin">
@@ -41,7 +35,7 @@ if(isset($_POST['submit'])) {
                 <section class="row justify-content-center">
                     <section class="col col-lg-4 kotak">
                         <form action="daftarakun.php" method="POST" class="form-container">
-                            <h4 class="text-center font-weight-bold"> Create Account </h4>
+                            <h4 class="text-center font-weight-bold"> FORM CREATE ACCOUNT </h4>
                             <div class="form-group">
                                 <label style="margin-bottom: 10px; margin-left: 45px;" for="name">Nama</label>
                                 <input type="text" class="form-control" id="name" placeholder="Masukkan Nama" name="nama" autofocus autocomplete="off" required>
@@ -50,6 +44,11 @@ if(isset($_POST['submit'])) {
                                 <label style="margin-bottom: 10px; margin-left: 45px;" for="InputEmail">Alamat Email</label>
                                 <input type="text" class="form-control" id="InputEmail" aria-describeby="emailHelp" placeholder="Masukkan email" name="email" autocomplete="off" required>
                             </div>
+
+                            <!-- LEVEL -->
+                            <input type="hidden" class="form-control" name="level" value="pelanggan">
+                            <!--  -->
+
                             <div class="form-group">
                                 <label style="margin-bottom: 10px; margin-left: 45px;" for="name">Username</label>
                                 <input type="text" class="form-control" id="username" placeholder="Masukkan username" name="username" autocomplete="off" required>
@@ -59,7 +58,7 @@ if(isset($_POST['submit'])) {
                                 <input type="password" class="form-control" id="InputPassword" placeholder="Password" name="password" autocomplete="off" required>
                             </div>
                             <div class="sub">
-                                <center><button type="submit" name="submit" class="btn btn-success btn-block">Register</button>
+                                <center><button type="submit" name="submit" class="btn btn-success btn-block">Buat Akun</button>
                                 <!-- <a href="login.php" class="btn btn-danger btn-block">Cancel</a> -->
                             
                                 <div id="notreg" class="form-footer mt-2">
