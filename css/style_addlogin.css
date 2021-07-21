@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap");
+
+body {
+  margin-top: 130px;
+  /* font-family: Assistant; */
+  background: #93ccaa;
+}
+
+.kotak {
+  box-shadow: 0px 0px 1px 0px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+  background: #ffffff;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 300px;
+  height: 39px;
+  left: 103px;
+  top: 410px;
+  margin: auto;
+  font-family: Assistant;
+  border: 1px solid #7eca9c;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-bottom: 9px;
+  font-family: Assistant;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.sub {
+  margin-top: 20px;
+}
+
+#create {
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 17px;
+  text-decoration: none;
+  /* identical to box height */
+
+  color: #2f5d62;
+}
+
+#notreg {
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 16px;
+  /* identical to box height */
+  margin-left: 25px;
+  color: #000000;
+}

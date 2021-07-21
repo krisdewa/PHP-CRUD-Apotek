@@ -14,9 +14,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css" />
 
-    <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap" rel="stylesheet">
-
     <!-- ANIMATED -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
