@@ -64,12 +64,12 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-groub">
-                                <input type="text" class="form-control" placeholder="Masukan Nama" name="nama_pembeli" id="">
+                                <input type="text" class="form-control" placeholder="Masukan Nama" name="nama_pembeli" id="" required>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-groub">
-                                <input type="text" class="form-control" placeholder="Masukan Alamat" name="alamat" id="">
+                                <input type="text" class="form-control" placeholder="Masukan Alamat" name="alamat" id="" required>
                             </div>
                         </div>
                         <div class="form-group row mt-4">
