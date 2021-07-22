@@ -22,6 +22,7 @@ Teknologi yang digunakan :
 - Javascript
 - Bootstrap
 - MySQL(Xammp)
+- AOS
 
 Contributor : 
 - Krisna Dewa Pratama
