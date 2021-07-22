@@ -6,6 +6,10 @@ LOGIN
 ![image](https://user-images.githubusercontent.com/59174531/126631689-c5b06bd0-91b1-420f-852c-312f0c7e7236.png)
 Menggunakan 3 level login kepala,staff dan pelanggan, untuk pembuatan akun khusus untuk pelanggan, untuk kepala dan staff wajib request kepada devs database
 
+BUAT AKUN
+![image](https://user-images.githubusercontent.com/59174531/126635822-5f22bcf1-3b43-4879-96fb-4bd0d8acd3e1.png)
+Membuat akun disini akan otomatis menjadi pelanggan jadi untuk mengakses staff dan kepala harus merubah level melalui database
+
 Home Utama
 ![image](https://user-images.githubusercontent.com/59174531/126631857-de106715-b279-4d95-b258-9c6ae2f98c3e.png)
 Home ini akan kita temui pada saat membuka website pertama kali
