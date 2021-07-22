@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelola Barang - SISTEM ADMINISTRASI APOTEK</title>
+    <title>Data Barang - SISTEM ADMINISTRASI APOTEK</title>
     <link rel="stylesheet" href="css/style_tab.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -26,7 +26,7 @@
         <div class="tab">
             <div style="background-color: #7ECA9C;" class="card">
                 <div style="background-color: #7ECA9C;" class="border-0 card-header">
-                    <h5 class="text-light card-title">Data Staff</h5>
+                    <h5 class="text-light card-title">Data Barang - SISTEM ADMINISTRASI APOTEK</h5>
                 </div>
                 <div class="card-body"> 
                     <table style="background-color: white;" class="table-tab">

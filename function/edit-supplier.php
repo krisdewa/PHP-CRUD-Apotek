@@ -15,7 +15,7 @@
         $alamat_supplier = $_POST['alamat_supplier'];
         $No_Telp = $_POST['No_Telp'];
 
-        $sql_edit = "UPDATE supplier SET nama_supplier = '$nama_supplier', alamat_supplier = '$alamat_supplier', Alamat = '$Alamat', No_Telp = '$No_Telp' WHERE ID_Supplier = '$ID_Supplier' ";
+        $sql_edit = "UPDATE supplier SET nama_supplier = '$nama_supplier', alamat_supplier = '$alamat_supplier', No_Telp = '$No_Telp' WHERE ID_Supplier = '$ID_Supplier' ";
         mysqli_query($koneksi, $sql_edit);
 
         header("Location:../data-supplier.php");

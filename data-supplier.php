@@ -21,7 +21,7 @@
         <div class="tab">
             <div style="background-color: #7ECA9C;" class="card">
             <div style="background-color: #7ECA9C;" class="border-0 card-header">
-                    <h5 class="text-light card-title">Data Supplier</h5>
+                    <h5 class="text-light card-title">Data Supplier - SISTEM ADMINISTRASI APOTEK</h5>
                 </div>
                 <div class="card-body">
                     <table style="background-color: white;" class="table-tab">
