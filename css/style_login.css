@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap");
 
 body {
-  margin-top: 130px;
+  margin-top: 125px;
   /* font-family: Assistant; */
-  background: #93ccaa;
+  background: #ccffbd;
 }
 
 .kotak1 {
@@ -108,8 +108,15 @@ label {
 }
 
 #loginbtn {
-  background: #2f5d62;
-  border: 1px solid #2f5d62;
+  background: #7eca9c;
+  border: 1px solid #7eca9c;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+#loginbtn:hover {
+  background: #a6d8ba;
+  border: 1px solid #ffffff;
   box-sizing: border-box;
   border-radius: 10px;
 }

@@ -3,16 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>LOGIN</title>
+    <title>SISTEM ADMINISTRASI APOTEK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style_login.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" data-aos="zoom-in">
         <div class="row justify-content-md-center ">
           <div id="login" class="col col-lg-4 kotak1">
 
@@ -44,6 +47,12 @@
           </div>
         </div>
       </div>
+    
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
 </body>
 </html>

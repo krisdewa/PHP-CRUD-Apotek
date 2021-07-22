@@ -1,15 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap");
 
 body {
-  margin-top: 130px;
+  margin-top: 125px;
   /* font-family: Assistant; */
-  background: #93ccaa;
+  background: #ccffbd;
 }
 
 .kotak {
   box-shadow: 0px 0px 1px 0px;
   border-bottom-right-radius: 6px;
   border-top-right-radius: 6px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+  background: #ffffff;
+}
+
+.kotak1 {
+  box-shadow: 0px 0px 1px 0px;
   border-bottom-left-radius: 6px;
   border-top-left-radius: 6px;
 
@@ -71,4 +81,16 @@ label {
   margin-top: 100px;
   margin-left: 20px;
   color: #000000;
+}
+
+#gambar {
+  background-color: #7eca9c;
+  margin-left: 00px;
+}
+
+img {
+  margin-top: 65px;
+  width: 330px;
+  height: 330px;
+  align-items: center;
 }
