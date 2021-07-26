@@ -2,6 +2,20 @@ TUGAS AKHIR PRPL
 
 PHP CRUD Sistem Administrasi di Apotek
 
+Dibuat menggunakan Visual Studio Code
+Teknologi yang digunakan : 
+- PHP
+- Javascript
+- Bootstrap
+- MySQL(Xammp)
+- AOS
+
+Contributor : 
+- Krisna Dewa Pratama
+- Gentha Muhammad Djamal
+- Muhammad Naufal Hafizh
+- Lalu Gugus
+
 LOGIN
 ![image](https://user-images.githubusercontent.com/59174531/126631689-c5b06bd0-91b1-420f-852c-312f0c7e7236.png)
 Menggunakan 3 level login kepala,staff dan pelanggan, untuk pembuatan akun khusus untuk pelanggan, untuk kepala dan staff wajib request kepada devs database
@@ -20,16 +34,4 @@ Service adalah tempat untuk transaksi pembelian obat, vitamin dan barang dll.
 
 
 
-Dibuat menggunakan Visual Studio Code
-Teknologi yang digunakan : 
-- PHP
-- Javascript
-- Bootstrap
-- MySQL(Xammp)
-- AOS
 
-Contributor : 
-- Krisna Dewa Pratama
-- Gentha Muhammad Djamal
-- Muhammad Naufal Hafizh
-- Lalu Gugus
