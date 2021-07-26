@@ -32,6 +32,8 @@ Service Penjualan
 ![image](https://user-images.githubusercontent.com/59174531/126631990-4cecc79e-35c6-43a3-86d9-2747f91c315e.png)
 Service adalah tempat untuk transaksi pembelian obat, vitamin dan barang dll. 
 
-
+Data Barang
+![image](https://user-images.githubusercontent.com/59174531/127010303-21dad7ec-0e57-4c18-aab2-2aa1081f5525.png)
+Data barang diatas dapat diakses hanya untuk staff, dibagian ini kita bisa menambahkan barang, mengedit barang, mengupload gambar untuk service, dan kita dapat menghapus barang.
 
 
