@@ -43,7 +43,7 @@
                 </div>
           </div>
           <div id="gambar" class="col col-lg-4 kotak2">
-              <img src="asset/img/apotek1.svg" class="rounded mx-auto d-block" alt="" style="">
+              <img src="asset/img/apotek1.svg" class="rounded mx-auto d-block" alt="">
           </div>
         </div>
       </div>

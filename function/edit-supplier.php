@@ -47,14 +47,14 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label class="col-sm-2 col-form-label">Nama Pegawai</label>
+                    <label class="col-sm-2 col-form-label">Nama Supplier</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" name="nama_supplier" value="<?= $result['nama_supplier'];?>" >
                     </div>
                 </div>
 
                 <div class="mb-3 row">
-                    <label class="col-sm-2 col-form-label">Posisi</label>
+                    <label class="col-sm-2 col-form-label">Alamat Supplier</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" name="alamat_supplier" value="<?= $result['alamat_supplier'];?>" >
                     </div>

@@ -10,7 +10,7 @@
         $Posisi = $_POST['Posisi'];
         $No_Telp = $_POST['No_Telp'];
 
-        $sql_insert = "INSERT INTO staff VALUES('$ID_Pegawai','$Nama','$Jenis_kelamin', '$Alamat', '$Posisi', '$No_Telp')";
+        $sql_insert = "INSERT INTO staff VALUES('$ID_Pegawai','$Nama','$Posisi', '$Alamat','$Jenis_kelamin', '$No_Telp')";
         mysqli_query($koneksi, $sql_insert);
 
         header("location:../data-staff.php");

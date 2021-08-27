@@ -32,7 +32,7 @@
                     <a <?php if($pageactive == "service") echo "class='nav-link active'";?>class="nav-link" aria-current="page" href="service.php">Service</a>
                 </li>
                 <li class="nav-item mx-3" style="font-size: 20px;">
-                    <a class="nav-link" aria-current="page" href="#">About</a>
+                    <a class="nav-link" aria-current="page" href="#contact"> About</a>
                 </li>
                 <li>
                     <a id="Logoutbtn" class="btn btn-primary nav-link active" aria-current="page" href="../logout.php" style="font-size: 21px;font-family: 'Assistant', sans-serif; font-weight: 600; letter-spacing: 1px" onclick="return confirm('Yakin ingin logout ?')">Logout</a>

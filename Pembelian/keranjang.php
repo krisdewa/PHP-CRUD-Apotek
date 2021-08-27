@@ -46,7 +46,7 @@
                     <?php 
                         $ambil = $koneksi -> query("SELECT * FROM barang WHERE ID_Barang = '$id_produk'");
                         $pecah = $ambil -> fetch_assoc();
-                        $total=$pecah['harga_jual']*$jumlah; 
+                        $total = $pecah['harga_jual'] * $jumlah; 
                     ?>
                     <tr>
                         <td><?php echo $nomer ?></td>

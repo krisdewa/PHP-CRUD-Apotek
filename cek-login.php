@@ -6,8 +6,12 @@ session_start();
 include 'connectdb.php';
 
 // menangkap data yang dikirim dari form login
-$email = $_POST['email'];
-$password = md5($_POST['password']);
+// $email = $_POST['email'];
+// $password = md5($_POST['password']);
+
+// With Filter 
+$email = filter_var($_POST["email"], FILTER_SANITIZE_STRING);
+$password = filter_var(md5($_POST['password']), FILTER_SANITIZE_STRING);
 
 // menyeleksi data user dengan username dan password yang sesuai
 $login = mysqli_query($koneksi,"select * from user where email='$email' and password='$password'");
